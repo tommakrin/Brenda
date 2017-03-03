@@ -1,0 +1,641 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Thomas\Desktop\Britney\TESTBENCHES\LocalMemory
+T_opt
+V73[U0KTgX@2och7kg<V:l1
+04 8 10 work sad_unit behavioral 1
+=1-bcee7b7467f0-578bfc84-3d7-bec
+Z1 o-quiet -auto_acc_if_foreign -work work
+n@_opt
+Z2 OL;O;10.1c;51
+Z3 dC:\Users\Thomas\Desktop\Britney\TESTBENCHES\LocalMemory
+T_opt1
+V5c93G5XJ?5baMDCmB>nPh0
+04 6 10 work sad_tb behavioral 1
+=1-bcee7b7467f0-5792a054-3a8-1e68
+R1
+n@_opt1
+R2
+Ecompressor_4_2
+Z4 w1461235211
+Z5 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z6 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z7 dC:\Users\Thomas\Desktop\Britney\TESTBENCHES\SadUnit
+Z8 8C:/Users/Thomas/Desktop/Britney/TESTBENCHES/SadUnit/compressor_4-2.vhd
+Z9 FC:/Users/Thomas/Desktop/Britney/TESTBENCHES/SadUnit/compressor_4-2.vhd
+l0
+L32
+V6zj2>ZjS3]<b53Pe5hE3J1
+Z10 OL;C;10.1c;51
+32
+Z11 !s108 1468798550.242000
+Z12 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|C:/Users/Thomas/Desktop/Britney/TESTBENCHES/SadUnit/compressor_4-2.vhd|
+Z13 !s107 C:/Users/Thomas/Desktop/Britney/TESTBENCHES/SadUnit/compressor_4-2.vhd|
+Z14 o-work work -2002 -explicit
+Z15 tExplicit 1
+!s100 hX57n;g?VX`UPXTjllS:12
+!i10b 1
+Abehavioral
+R5
+R6
+DEx4 work 14 compressor_4_2 0 22 6zj2>ZjS3]<b53Pe5hE3J1
+l45
+L40
+VFh>zi`8M`MA0NOMCXRTXe2
+R10
+32
+R11
+R12
+R13
+R14
+R15
+!s100 ?n>Uh=JIN?S9VVY;Kij^X3
+!i10b 1
+Efour_10bit_word_adder
+Z16 w1468086963
+R5
+R6
+R7
+Z17 8C:/Users/Thomas/Desktop/Britney/TESTBENCHES/SadUnit/four_10bit_word_adder.vhd
+Z18 FC:/Users/Thomas/Desktop/Britney/TESTBENCHES/SadUnit/four_10bit_word_adder.vhd
+l0
+L23
+V6IkRm:fflKR6KHkKeWn4J1
+R10
+32
+Z19 !s108 1468798550.336000
+Z20 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|C:/Users/Thomas/Desktop/Britney/TESTBENCHES/SadUnit/four_10bit_word_adder.vhd|
+Z21 !s107 C:/Users/Thomas/Desktop/Britney/TESTBENCHES/SadUnit/four_10bit_word_adder.vhd|
+R14
+R15
+!s100 iR1o2i0TOe:`VdMg``0=W1
+!i10b 1
+Abehavioral
+R5
+R6
+DEx4 work 21 four_10bit_word_adder 0 22 6IkRm:fflKR6KHkKeWn4J1
+l74
+L41
+V`amLN8j8W`m;Ec]3Y;4kI2
+R10
+32
+R19
+R20
+R21
+R14
+R15
+!s100 1WoYQ?`Q7<Lff95d0^A8]1
+!i10b 1
+Efour_12bit_word_adder
+Z22 w1468086996
+R5
+R6
+R7
+Z23 8C:/Users/Thomas/Desktop/Britney/TESTBENCHES/SadUnit/four_12bit_word_adder.vhd
+Z24 FC:/Users/Thomas/Desktop/Britney/TESTBENCHES/SadUnit/four_12bit_word_adder.vhd
+l0
+L23
+Vi>k65:cgjaoF5cK>noAFK1
+R10
+32
+Z25 !s108 1468798550.472000
+Z26 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|C:/Users/Thomas/Desktop/Britney/TESTBENCHES/SadUnit/four_12bit_word_adder.vhd|
+Z27 !s107 C:/Users/Thomas/Desktop/Britney/TESTBENCHES/SadUnit/four_12bit_word_adder.vhd|
+R14
+R15
+!s100 Q;g^m9PUU9M@@F:jIOO6l2
+!i10b 1
+Abehavioral
+R5
+R6
+DEx4 work 21 four_12bit_word_adder 0 22 i>k65:cgjaoF5cK>noAFK1
+l74
+L41
+V?=P@zX^@KO:@PQWSXZDc:0
+R10
+32
+R25
+R26
+R27
+R14
+R15
+!s100 0[a3ReU2d]jXZT7VW6S?b1
+!i10b 1
+Efour_14bit_word_adder
+Z28 w1468087008
+R5
+R6
+R7
+Z29 8C:/Users/Thomas/Desktop/Britney/TESTBENCHES/SadUnit/four_14bit_word_adder.vhd
+Z30 FC:/Users/Thomas/Desktop/Britney/TESTBENCHES/SadUnit/four_14bit_word_adder.vhd
+l0
+L23
+VjK8G]^Q<lQCN^kJhT9KQd2
+R10
+32
+Z31 !s108 1468798550.574000
+Z32 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|C:/Users/Thomas/Desktop/Britney/TESTBENCHES/SadUnit/four_14bit_word_adder.vhd|
+Z33 !s107 C:/Users/Thomas/Desktop/Britney/TESTBENCHES/SadUnit/four_14bit_word_adder.vhd|
+R14
+R15
+!s100 mLM[Xf:7SOczaI]SSk^JJ0
+!i10b 1
+Abehavioral
+R5
+R6
+DEx4 work 21 four_14bit_word_adder 0 22 jK8G]^Q<lQCN^kJhT9KQd2
+l74
+L41
+V708AjINEHShY?F@7Ofm103
+R10
+32
+R31
+R32
+R33
+R14
+R15
+!s100 DBni1iXjnXoA=fz@aJWWG2
+!i10b 1
+Efour_byte_adder
+Z34 w1468086926
+R5
+R6
+R7
+Z35 8C:/Users/Thomas/Desktop/Britney/TESTBENCHES/SadUnit/four_byte_adder.vhd
+Z36 FC:/Users/Thomas/Desktop/Britney/TESTBENCHES/SadUnit/four_byte_adder.vhd
+l0
+L23
+VVLJBc5ndEFkd=h<I>^FzR3
+R10
+32
+Z37 !s108 1468798550.727000
+Z38 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|C:/Users/Thomas/Desktop/Britney/TESTBENCHES/SadUnit/four_byte_adder.vhd|
+Z39 !s107 C:/Users/Thomas/Desktop/Britney/TESTBENCHES/SadUnit/four_byte_adder.vhd|
+R14
+R15
+!s100 [75?dj:=<i=E6:;PZh@=43
+!i10b 1
+Abehavioral
+R5
+R6
+DEx4 work 15 four_byte_adder 0 22 VLJBc5ndEFkd=h<I>^FzR3
+l72
+L41
+VBZ3k=h6g4NA>=gY04I7]C2
+R10
+32
+R37
+R38
+R39
+R14
+R15
+!s100 QX<RHLLMkLMKVzV`XL[d03
+!i10b 1
+Egeneric_11bit_adder
+Z40 w1461518215
+Z41 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
+Z42 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
+R5
+R6
+R7
+Z43 8C:/Users/Thomas/Desktop/Britney/TESTBENCHES/SadUnit/generic_11bit_adder.vhd
+Z44 FC:/Users/Thomas/Desktop/Britney/TESTBENCHES/SadUnit/generic_11bit_adder.vhd
+l0
+L25
+V>bV`:8?hkO1`h7b95cBm70
+R10
+32
+Z45 !s108 1468798552.048000
+Z46 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|C:/Users/Thomas/Desktop/Britney/TESTBENCHES/SadUnit/generic_11bit_adder.vhd|
+Z47 !s107 C:/Users/Thomas/Desktop/Britney/TESTBENCHES/SadUnit/generic_11bit_adder.vhd|
+R14
+R15
+!s100 o7o[C``3f;R>2zfJ;4=SL3
+!i10b 1
+Abehavioral
+R41
+R42
+R5
+R6
+DEx4 work 19 generic_11bit_adder 0 22 >bV`:8?hkO1`h7b95cBm70
+l39
+L38
+V1e@_9Nmfk91=WXD]5L7>z1
+R10
+32
+R45
+R46
+R47
+R14
+R15
+!s100 >nPZ@2Ho7RBESV426gLF_1
+!i10b 1
+Egeneric_13bit_adder
+Z48 w1461585323
+R41
+R42
+R5
+R6
+R7
+Z49 8C:/Users/Thomas/Desktop/Britney/TESTBENCHES/SadUnit/generic_13bit_adder.vhd
+Z50 FC:/Users/Thomas/Desktop/Britney/TESTBENCHES/SadUnit/generic_13bit_adder.vhd
+l0
+L25
+V^ZGFDf21SY?h@ljoVXzIn3
+R10
+32
+Z51 !s108 1468798551.026000
+Z52 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|C:/Users/Thomas/Desktop/Britney/TESTBENCHES/SadUnit/generic_13bit_adder.vhd|
+Z53 !s107 C:/Users/Thomas/Desktop/Britney/TESTBENCHES/SadUnit/generic_13bit_adder.vhd|
+R14
+R15
+!s100 Bn[GWWlJS>E[`5ITU<SbY3
+!i10b 1
+Abehavioral
+R41
+R42
+R5
+R6
+DEx4 work 19 generic_13bit_adder 0 22 ^ZGFDf21SY?h@ljoVXzIn3
+l39
+L38
+VGSdBM[X1[YUIH^SKVXnQM0
+R10
+32
+R51
+R52
+R53
+R14
+R15
+!s100 Nc99aXG`oTXE=lOdzR>^L0
+!i10b 1
+Egeneric_15bit_adder
+Z54 w1461593332
+R41
+R42
+R5
+R6
+R7
+Z55 8C:/Users/Thomas/Desktop/Britney/TESTBENCHES/SadUnit/generic_15bit_adder.vhd
+Z56 FC:/Users/Thomas/Desktop/Britney/TESTBENCHES/SadUnit/generic_15bit_adder.vhd
+l0
+L25
+V0F^ADSRoL=MH]H3a2bC:V3
+R10
+32
+Z57 !s108 1468798551.162000
+Z58 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|C:/Users/Thomas/Desktop/Britney/TESTBENCHES/SadUnit/generic_15bit_adder.vhd|
+Z59 !s107 C:/Users/Thomas/Desktop/Britney/TESTBENCHES/SadUnit/generic_15bit_adder.vhd|
+R14
+R15
+!s100 18Kl79V<6:RBKmO?BGYQK2
+!i10b 1
+Abehavioral
+R41
+R42
+R5
+R6
+DEx4 work 19 generic_15bit_adder 0 22 0F^ADSRoL=MH]H3a2bC:V3
+l39
+L38
+V_fmN5:fVQDWcQ:C]V<3GB3
+R10
+32
+R57
+R58
+R59
+R14
+R15
+!s100 HlKJ`3bMDU9eU3@?__0fO1
+!i10b 1
+Egeneric_9bit_adder
+Z60 w1461455094
+R41
+R42
+R5
+R6
+R7
+Z61 8C:/Users/Thomas/Desktop/Britney/TESTBENCHES/SadUnit/generic_9bit_adder.vhd
+Z62 FC:/Users/Thomas/Desktop/Britney/TESTBENCHES/SadUnit/generic_9bit_adder.vhd
+l0
+L25
+VB=oMcL[PDFO8_V8iW`fFL0
+R10
+32
+Z63 !s108 1468798550.874000
+Z64 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|C:/Users/Thomas/Desktop/Britney/TESTBENCHES/SadUnit/generic_9bit_adder.vhd|
+Z65 !s107 C:/Users/Thomas/Desktop/Britney/TESTBENCHES/SadUnit/generic_9bit_adder.vhd|
+R14
+R15
+!s100 ?XQGbg:nca71]cLNn>f;O2
+!i10b 1
+Abehavioral
+R41
+R42
+R5
+R6
+DEx4 work 18 generic_9bit_adder 0 22 B=oMcL[PDFO8_V8iW`fFL0
+l39
+L38
+VdX;kYgZllLK5c]C^T5F5a3
+R10
+32
+R63
+R64
+R65
+R14
+R15
+!s100 CY33`[W<DNKO3NOT>g@QW3
+!i10b 1
+Epe
+Z66 w1469227064
+Z67 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+R5
+R6
+R7
+Z68 8C:/Users/Thomas/Desktop/Britney/TESTBENCHES/SadUnit/pe.vhd
+Z69 FC:/Users/Thomas/Desktop/Britney/TESTBENCHES/SadUnit/pe.vhd
+l0
+L5
+VLbzSmj]9C1^]HJlM7PzcA2
+R10
+32
+Z70 !s108 1469227067.754000
+Z71 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|C:/Users/Thomas/Desktop/Britney/TESTBENCHES/SadUnit/pe.vhd|
+Z72 !s107 C:/Users/Thomas/Desktop/Britney/TESTBENCHES/SadUnit/pe.vhd|
+R14
+R15
+!s100 f8fgg=K33X]2iVZobJlT^0
+!i10b 1
+Abehavioral
+R67
+R5
+R6
+DEx4 work 2 pe 0 22 LbzSmj]9C1^]HJlM7PzcA2
+l30
+L24
+VhnP3<R1]_[b88KM<=@_j:1
+R10
+32
+R70
+R71
+R72
+R14
+R15
+!s100 fWZJ><GTJKM7odh=iXzQP3
+!i10b 1
+Epe_16x1
+Z73 w1468231992
+R67
+R5
+R6
+R7
+Z74 8C:/Users/Thomas/Desktop/Britney/TESTBENCHES/SadUnit/pe_16x1.vhd
+Z75 FC:/Users/Thomas/Desktop/Britney/TESTBENCHES/SadUnit/pe_16x1.vhd
+l0
+L26
+VNem29ZA>LoK[?D16FQ22M3
+R10
+32
+Z76 !s108 1468798551.527000
+Z77 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|C:/Users/Thomas/Desktop/Britney/TESTBENCHES/SadUnit/pe_16x1.vhd|
+Z78 !s107 C:/Users/Thomas/Desktop/Britney/TESTBENCHES/SadUnit/pe_16x1.vhd|
+R14
+R15
+!s100 f3YBjWT87l2ifNJ@^0Y8C3
+!i10b 1
+Abehavioral
+R67
+R5
+R6
+DEx4 work 7 pe_16x1 0 22 Nem29ZA>LoK[?D16FQ22M3
+l96
+L50
+V22I37MfmagSm51bSaPWKU3
+R10
+32
+R76
+R77
+R78
+R14
+R15
+!s100 ojRA@TISgbJNiB:ie8H9c2
+!i10b 1
+Epe_8x1
+Z79 w1468283685
+R67
+R5
+R6
+R7
+Z80 8C:/Users/Thomas/Desktop/Britney/TESTBENCHES/SadUnit/pe_8x1.vhd
+Z81 FC:/Users/Thomas/Desktop/Britney/TESTBENCHES/SadUnit/pe_8x1.vhd
+l0
+L25
+Vz8@DIeg2Z]zdFH>IkS1nH2
+R10
+32
+Z82 !s108 1468798551.419000
+Z83 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|C:/Users/Thomas/Desktop/Britney/TESTBENCHES/SadUnit/pe_8x1.vhd|
+Z84 !s107 C:/Users/Thomas/Desktop/Britney/TESTBENCHES/SadUnit/pe_8x1.vhd|
+R14
+R15
+!s100 4f<_7]4H]IZf^=1Y0R@K81
+!i10b 1
+Abehavioral
+R67
+R5
+R6
+DEx4 work 6 pe_8x1 0 22 z8@DIeg2Z]zdFH>IkS1nH2
+l107
+L56
+V>]B^04KfO]abW4RN@Jn9P1
+R10
+32
+R82
+R83
+R84
+R14
+R15
+!s100 ;?Iek<^jI8`hLL[ONH0b92
+!i10b 1
+Epe_array_16x16
+Z85 w1461171844
+R5
+R6
+R7
+Z86 8C:/Users/Thomas/Desktop/Britney/TESTBENCHES/SadUnit/PE_ARRAY_16X16.vhd
+Z87 FC:/Users/Thomas/Desktop/Britney/TESTBENCHES/SadUnit/PE_ARRAY_16X16.vhd
+l0
+L32
+V3e>Q@>@hAdfN8B`6Vo=;e0
+R10
+32
+Z88 !s108 1468798551.631000
+Z89 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|C:/Users/Thomas/Desktop/Britney/TESTBENCHES/SadUnit/PE_ARRAY_16X16.vhd|
+Z90 !s107 C:/Users/Thomas/Desktop/Britney/TESTBENCHES/SadUnit/PE_ARRAY_16X16.vhd|
+R14
+R15
+!s100 DDeJ4M]G1_NgQ`i:bhAMN1
+!i10b 1
+Abehavioral
+R5
+R6
+DEx4 work 14 pe_array_16x16 0 22 3e>Q@>@hAdfN8B`6Vo=;e0
+l79
+L51
+VcgK2@81n1miBDj_YDDV8I2
+R10
+32
+R88
+R89
+R90
+R14
+R15
+!s100 ?9?O6e?N4Q6fQz9WE0FdM3
+!i10b 1
+Esad_tb
+Z91 w1468800051
+R42
+R41
+R5
+R6
+R7
+Z92 8C:/Users/Thomas/Desktop/Britney/TESTBENCHES/SadUnit/TESTBENCH.vhd
+Z93 FC:/Users/Thomas/Desktop/Britney/TESTBENCHES/SadUnit/TESTBENCH.vhd
+l0
+L6
+VVB3k0^dSQOWjOMJE>GJfI1
+R10
+32
+Z94 !s108 1468800174.188000
+Z95 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|C:/Users/Thomas/Desktop/Britney/TESTBENCHES/SadUnit/TESTBENCH.vhd|
+Z96 !s107 C:/Users/Thomas/Desktop/Britney/TESTBENCHES/SadUnit/TESTBENCH.vhd|
+R14
+R15
+!s100 zl;Z0L]^kW1o;d6nB4@0b2
+!i10b 1
+Abehavioral
+R42
+R41
+R5
+R6
+DEx4 work 6 sad_tb 0 22 VB3k0^dSQOWjOMJE>GJfI1
+l46
+L9
+VH`1B;fYaYH<?DeY_T`nkA3
+R10
+32
+R94
+R95
+R96
+R14
+R15
+!s100 MAQ5TU]V1jYSEW;L>@@Bl1
+!i10b 1
+Esad_unit
+Z97 w1468791919
+R5
+R6
+R7
+Z98 8C:/Users/Thomas/Desktop/Britney/TESTBENCHES/SadUnit/SAD_Unit.vhd
+Z99 FC:/Users/Thomas/Desktop/Britney/TESTBENCHES/SadUnit/SAD_Unit.vhd
+l0
+L4
+V<EI;]K9k@]1M9@U@m?[IE3
+R10
+32
+Z100 !s108 1468798551.747000
+Z101 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|C:/Users/Thomas/Desktop/Britney/TESTBENCHES/SadUnit/SAD_Unit.vhd|
+Z102 !s107 C:/Users/Thomas/Desktop/Britney/TESTBENCHES/SadUnit/SAD_Unit.vhd|
+R14
+R15
+!s100 eB?_a_z3GJ7zodZFBWVj61
+!i10b 1
+Abehavioral
+R5
+R6
+DEx4 work 8 sad_unit 0 22 <EI;]K9k@]1M9@U@m?[IE3
+l49
+L22
+VmP:ojL__JJBTn59C?DPoi3
+R10
+32
+R100
+R101
+R102
+R14
+R15
+!s100 zRjzn:h:Cl8:=m^gbKG@V1
+!i10b 1
+Etreeadder
+Z103 w1461671347
+R5
+R6
+R7
+Z104 8C:/Users/Thomas/Desktop/Britney/TESTBENCHES/SadUnit/TreeAdder.vhd
+Z105 FC:/Users/Thomas/Desktop/Britney/TESTBENCHES/SadUnit/TreeAdder.vhd
+l0
+L23
+Vgd:;c:T]X4F_JOFmWNm3R3
+R10
+32
+Z106 !s108 1468798551.848000
+Z107 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|C:/Users/Thomas/Desktop/Britney/TESTBENCHES/SadUnit/TreeAdder.vhd|
+Z108 !s107 C:/Users/Thomas/Desktop/Britney/TESTBENCHES/SadUnit/TreeAdder.vhd|
+R14
+R15
+!s100 N2lbYMd:z0mebRkz06^MS2
+!i10b 1
+Abehavioral
+R5
+R6
+DEx4 work 9 treeadder 0 22 gd:;c:T]X4F_JOFmWNm3R3
+l62
+L28
+V8799CLYgSC<^n[eDO02<O0
+R10
+32
+R106
+R107
+R108
+R14
+R15
+!s100 b]`?nkGTbSk:UX_b^c[F61
+!i10b 1
+Ex16_byte_adder
+Z109 w1461541510
+R5
+R6
+R7
+Z110 8C:/Users/Thomas/Desktop/Britney/TESTBENCHES/SadUnit/x16_byte_adder.vhd
+Z111 FC:/Users/Thomas/Desktop/Britney/TESTBENCHES/SadUnit/x16_byte_adder.vhd
+l0
+L4
+V>0Ue3WDB9DgESzYAfd]3E1
+R10
+32
+Z112 !s108 1468798551.956000
+Z113 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|C:/Users/Thomas/Desktop/Britney/TESTBENCHES/SadUnit/x16_byte_adder.vhd|
+Z114 !s107 C:/Users/Thomas/Desktop/Britney/TESTBENCHES/SadUnit/x16_byte_adder.vhd|
+R14
+R15
+!s100 j6YC5QQ0CVKmkJo:[]PLW1
+!i10b 1
+Abehavioral
+R5
+R6
+DEx4 work 14 x16_byte_adder 0 22 >0Ue3WDB9DgESzYAfd]3E1
+l43
+L10
+VFENATkI7PAMWWFfc5>z6U1
+R10
+32
+R112
+R113
+R114
+R14
+R15
+!s100 S4zGhIb?EZ5GiG25jli8R0
+!i10b 1

@@ -1,0 +1,1563 @@
+Release 14.5 - xst P.58f (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.07 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.07 secs
+ 
+--> Reading design: BRITNEY.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "BRITNEY.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "BRITNEY"
+Output Format                      : NGC
+Target Device                      : xc7z020-3-clg484
+
+---- Source Options
+Top Module Name                    : BRITNEY
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:\Users\Thomas\Desktop\Britney\IMPLEMENTATION\pe.vhd" into library work
+Parsing entity <pe>.
+Parsing architecture <behavioral> of entity <pe>.
+Parsing VHDL file "C:\Users\Thomas\Desktop\Britney\IMPLEMENTATION\generic_9bit_adder.vhd" into library work
+Parsing entity <generic_9bit_adder>.
+Parsing architecture <Behavioral> of entity <generic_9bit_adder>.
+Parsing VHDL file "C:\Users\Thomas\Desktop\Britney\IMPLEMENTATION\generic_11bit_adder.vhd" into library work
+Parsing entity <generic_11bit_adder>.
+Parsing architecture <Behavioral> of entity <generic_11bit_adder>.
+Parsing VHDL file "C:\Users\Thomas\Desktop\Britney\IMPLEMENTATION\compressor_4-2.vhd" into library work
+Parsing entity <compressor_4_2>.
+Parsing architecture <Behavioral> of entity <compressor_4_2>.
+Parsing VHDL file "C:\Users\Thomas\Desktop\Britney\IMPLEMENTATION\reg8.vhd" into library work
+Parsing entity <reg8>.
+Parsing architecture <Behavioral> of entity <reg8>.
+Parsing VHDL file "C:\Users\Thomas\Desktop\Britney\IMPLEMENTATION\pe_8x1.vhd" into library work
+Parsing entity <pe_8x1>.
+Parsing architecture <Behavioral> of entity <pe_8x1>.
+Parsing VHDL file "C:\Users\Thomas\Desktop\Britney\IMPLEMENTATION\generic_15bit_adder.vhd" into library work
+Parsing entity <generic_15bit_adder>.
+Parsing architecture <Behavioral> of entity <generic_15bit_adder>.
+Parsing VHDL file "C:\Users\Thomas\Desktop\Britney\IMPLEMENTATION\generic_13bit_adder.vhd" into library work
+Parsing entity <generic_13bit_adder>.
+Parsing architecture <Behavioral> of entity <generic_13bit_adder>.
+Parsing VHDL file "C:\Users\Thomas\Desktop\Britney\IMPLEMENTATION\four_byte_adder.vhd" into library work
+Parsing entity <four_byte_adder>.
+Parsing architecture <Behavioral> of entity <four_byte_adder>.
+Parsing VHDL file "C:\Users\Thomas\Desktop\Britney\IMPLEMENTATION\four_10bit_word_adder.vhd" into library work
+Parsing entity <four_10bit_word_adder>.
+Parsing architecture <Behavioral> of entity <four_10bit_word_adder>.
+Parsing VHDL file "C:\Users\Thomas\Desktop\Britney\IMPLEMENTATION\x16_byte_adder.vhd" into library work
+Parsing entity <x16_byte_adder>.
+Parsing architecture <Behavioral> of entity <x16_byte_adder>.
+Parsing VHDL file "C:\Users\Thomas\Desktop\Britney\IMPLEMENTATION\RegCol.vhd" into library work
+Parsing entity <RegCol>.
+Parsing architecture <Behavioral> of entity <regcol>.
+Parsing VHDL file "C:\Users\Thomas\Desktop\Britney\IMPLEMENTATION\pe_16x1.vhd" into library work
+Parsing entity <pe_16x1>.
+Parsing architecture <Behavioral> of entity <pe_16x1>.
+Parsing VHDL file "C:\Users\Thomas\Desktop\Britney\IMPLEMENTATION\mux16x1.vhd" into library work
+Parsing entity <mux16x1>.
+Parsing architecture <behaviour> of entity <mux16x1>.
+Parsing VHDL file "C:\Users\Thomas\Desktop\Britney\IMPLEMENTATION\four_14bit_word_adder.vhd" into library work
+Parsing entity <four_14bit_word_adder>.
+Parsing architecture <Behavioral> of entity <four_14bit_word_adder>.
+Parsing VHDL file "C:\Users\Thomas\Desktop\Britney\IMPLEMENTATION\four_12bit_word_adder.vhd" into library work
+Parsing entity <four_12bit_word_adder>.
+Parsing architecture <Behavioral> of entity <four_12bit_word_adder>.
+Parsing VHDL file "C:\Users\Thomas\Desktop\Britney\IMPLEMENTATION\x6bit_counter.vhd" into library work
+Parsing entity <x6bit_counter>.
+Parsing architecture <Behavioral> of entity <x6bit_counter>.
+Parsing VHDL file "C:\Users\Thomas\Desktop\Britney\IMPLEMENTATION\X16Comparator.vhd" into library work
+Parsing entity <X16Comparator>.
+Parsing architecture <Behavioral> of entity <x16comparator>.
+Parsing VHDL file "C:\Users\Thomas\Desktop\Britney\IMPLEMENTATION\x15bit_counter.vhd" into library work
+Parsing entity <x11bit_counter>.
+Parsing architecture <Behavioral> of entity <x11bit_counter>.
+Parsing VHDL file "C:\Users\Thomas\Desktop\Britney\IMPLEMENTATION\TreeAdder.vhd" into library work
+Parsing entity <TreeAdder>.
+Parsing architecture <Behavioral> of entity <treeadder>.
+Parsing VHDL file "C:\Users\Thomas\Desktop\Britney\IMPLEMENTATION\SubMemory.vhd" into library work
+Parsing entity <SubMemory>.
+Parsing architecture <Behavioral> of entity <submemory>.
+Parsing VHDL file "C:\Users\Thomas\Desktop\Britney\IMPLEMENTATION\reg54.vhd" into library work
+Parsing entity <reg54>.
+Parsing architecture <Behavioral> of entity <reg54>.
+Parsing VHDL file "C:\Users\Thomas\Desktop\Britney\IMPLEMENTATION\PE_ARRAY_16X16.vhd" into library work
+Parsing entity <PE_ARRAY_16X16>.
+Parsing architecture <Behavioral> of entity <pe_array_16x16>.
+Parsing VHDL file "C:\Users\Thomas\Desktop\Britney\IMPLEMENTATION\mux3x1.vhd" into library work
+Parsing entity <mux3x1>.
+Parsing architecture <behaviour> of entity <mux3x1>.
+Parsing VHDL file "C:\Users\Thomas\Desktop\Britney\IMPLEMENTATION\demux.vhd" into library work
+Parsing entity <LocalMemory_Demux>.
+Parsing architecture <Behavioral> of entity <localmemory_demux>.
+Parsing VHDL file "C:\Users\Thomas\Desktop\Britney\IMPLEMENTATION\Controller.vhd" into library work
+Parsing entity <Controller>.
+Parsing architecture <Behavioral> of entity <controller>.
+Parsing VHDL file "C:\Users\Thomas\Desktop\Britney\IMPLEMENTATION\SAD_Unit.vhd" into library work
+Parsing entity <SAD_Unit>.
+Parsing architecture <Behavioral> of entity <sad_unit>.
+Parsing VHDL file "C:\Users\Thomas\Desktop\Britney\IMPLEMENTATION\MotionVectorMemory.vhd" into library work
+Parsing entity <Motion_Vector_Memory>.
+Parsing architecture <Motion_Vector_Memory> of entity <motion_vector_memory>.
+Parsing VHDL file "C:\Users\Thomas\Desktop\Britney\IMPLEMENTATION\LocalMemory.vhd" into library work
+Parsing entity <LocalMemory>.
+Parsing architecture <Behavioral> of entity <localmemory>.
+Parsing VHDL file "C:\Users\Thomas\Desktop\Britney\IMPLEMENTATION\Control_Unit.vhd" into library work
+Parsing entity <Control_Unit>.
+Parsing architecture <Behavioral> of entity <control_unit>.
+Parsing VHDL file "C:\Users\Thomas\Desktop\Britney\IMPLEMENTATION\COMPARE_Unit.vhd" into library work
+Parsing entity <COMPARE_Unit>.
+Parsing architecture <Behavioral> of entity <compare_unit>.
+Parsing VHDL file "C:\Users\Thomas\Desktop\Britney\IMPLEMENTATION\BRITNEY.vhd" into library work
+Parsing entity <BRITNEY>.
+Parsing architecture <Behavioral> of entity <britney>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <BRITNEY> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <LocalMemory> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <LocalMemory_Demux> (architecture <Behavioral>) from library <work>.
+INFO:HDLCompiler:679 - "C:\Users\Thomas\Desktop\Britney\IMPLEMENTATION\demux.vhd" Line 43. Case statement is complete. others clause is never selected
+
+Elaborating entity <SubMemory> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <RegCol> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <reg8> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <mux16x1> (architecture <behaviour>) with generics from library <work>.
+
+Elaborating entity <x6bit_counter> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <mux3x1> (architecture <behaviour>) with generics from library <work>.
+
+Elaborating entity <SAD_Unit> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <PE_ARRAY_16X16> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <pe_16x1> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <pe_8x1> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <pe> (architecture <behavioral>) from library <work>.
+
+Elaborating entity <TreeAdder> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <x16_byte_adder> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <four_byte_adder> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <compressor_4_2> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <generic_9bit_adder> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <four_10bit_word_adder> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <generic_11bit_adder> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <four_12bit_word_adder> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <generic_13bit_adder> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <four_14bit_word_adder> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <generic_15bit_adder> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <COMPARE_Unit> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <X16Comparator> (architecture <Behavioral>) from library <work>.
+WARNING:HDLCompiler:92 - "C:\Users\Thomas\Desktop\Britney\IMPLEMENTATION\X16Comparator.vhd" Line 55: sad should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Thomas\Desktop\Britney\IMPLEMENTATION\X16Comparator.vhd" Line 56: pos should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Thomas\Desktop\Britney\IMPLEMENTATION\X16Comparator.vhd" Line 58: sad_cur should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\Thomas\Desktop\Britney\IMPLEMENTATION\X16Comparator.vhd" Line 59: pos_cur should be on the sensitivity list of the process
+
+Elaborating entity <reg54> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <Motion_Vector_Memory> (architecture <Motion_Vector_Memory>) from library <work>.
+
+Elaborating entity <Control_Unit> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <x11bit_counter> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <Controller> (architecture <Behavioral>) from library <work>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <BRITNEY>.
+    Related source file is "C:\Users\Thomas\Desktop\Britney\IMPLEMENTATION\BRITNEY.vhd".
+INFO:Xst:3210 - "C:\Users\Thomas\Desktop\Britney\IMPLEMENTATION\BRITNEY.vhd" line 170: Output port <data_count> of the instance <MVMEMORY> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Thomas\Desktop\Britney\IMPLEMENTATION\BRITNEY.vhd" line 170: Output port <full> of the instance <MVMEMORY> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Thomas\Desktop\Britney\IMPLEMENTATION\BRITNEY.vhd" line 170: Output port <empty> of the instance <MVMEMORY> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Thomas\Desktop\Britney\IMPLEMENTATION\BRITNEY.vhd" line 180: Output port <en_cnt> of the instance <CONTROLUNIT> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <BRITNEY> synthesized.
+
+Synthesizing Unit <LocalMemory>.
+    Related source file is "C:\Users\Thomas\Desktop\Britney\IMPLEMENTATION\LocalMemory.vhd".
+    Summary:
+	no macro.
+Unit <LocalMemory> synthesized.
+
+Synthesizing Unit <LocalMemory_Demux>.
+    Related source file is "C:\Users\Thomas\Desktop\Britney\IMPLEMENTATION\demux.vhd".
+    Summary:
+	inferred   4 Multiplexer(s).
+Unit <LocalMemory_Demux> synthesized.
+
+Synthesizing Unit <SubMemory>.
+    Related source file is "C:\Users\Thomas\Desktop\Britney\IMPLEMENTATION\SubMemory.vhd".
+    Summary:
+	no macro.
+Unit <SubMemory> synthesized.
+
+Synthesizing Unit <RegCol>.
+    Related source file is "C:\Users\Thomas\Desktop\Britney\IMPLEMENTATION\RegCol.vhd".
+    Summary:
+	no macro.
+Unit <RegCol> synthesized.
+
+Synthesizing Unit <reg8>.
+    Related source file is "C:\Users\Thomas\Desktop\Britney\IMPLEMENTATION\reg8.vhd".
+        regCount = 8
+    Found 8-bit register for signal <reg_out>.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+Unit <reg8> synthesized.
+
+Synthesizing Unit <mux16x1>.
+    Related source file is "C:\Users\Thomas\Desktop\Britney\IMPLEMENTATION\mux16x1.vhd".
+        N = 128
+        inputs = 16
+    Found 128-bit 16-to-1 multiplexer for signal <data_out> created at line 27.
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <mux16x1> synthesized.
+
+Synthesizing Unit <x6bit_counter>.
+    Related source file is "C:\Users\Thomas\Desktop\Britney\IMPLEMENTATION\x6bit_counter.vhd".
+    Found 6-bit register for signal <count>.
+    Found 6-bit adder for signal <count[5]_count[5]_mux_1_OUT> created at line 25.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   6 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <x6bit_counter> synthesized.
+
+Synthesizing Unit <mux3x1>.
+    Related source file is "C:\Users\Thomas\Desktop\Britney\IMPLEMENTATION\mux3x1.vhd".
+        N = 128
+    Found 128-bit 4-to-1 multiplexer for signal <data_out> created at line 27.
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <mux3x1> synthesized.
+
+Synthesizing Unit <SAD_Unit>.
+    Related source file is "C:\Users\Thomas\Desktop\Britney\IMPLEMENTATION\SAD_Unit.vhd".
+    Summary:
+	no macro.
+Unit <SAD_Unit> synthesized.
+
+Synthesizing Unit <PE_ARRAY_16X16>.
+    Related source file is "C:\Users\Thomas\Desktop\Britney\IMPLEMENTATION\PE_ARRAY_16X16.vhd".
+    Summary:
+	no macro.
+Unit <PE_ARRAY_16X16> synthesized.
+
+Synthesizing Unit <pe_16x1>.
+    Related source file is "C:\Users\Thomas\Desktop\Britney\IMPLEMENTATION\pe_16x1.vhd".
+INFO:Xst:3210 - "C:\Users\Thomas\Desktop\Britney\IMPLEMENTATION\pe_16x1.vhd" line 110: Output port <SHIFT_CB_o> of the instance <RP1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Thomas\Desktop\Britney\IMPLEMENTATION\pe_16x1.vhd" line 110: Output port <SHIFT_RB_o> of the instance <RP1> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <pe_16x1> synthesized.
+
+Synthesizing Unit <pe_8x1>.
+    Related source file is "C:\Users\Thomas\Desktop\Britney\IMPLEMENTATION\pe_8x1.vhd".
+    Summary:
+	no macro.
+Unit <pe_8x1> synthesized.
+
+Synthesizing Unit <pe>.
+    Related source file is "C:\Users\Thomas\Desktop\Britney\IMPLEMENTATION\pe.vhd".
+    Found 8-bit register for signal <RBR>.
+    Found 8-bit register for signal <CBR>.
+    Found 9-bit subtractor for signal <GND_19_o_GND_19_o_sub_6_OUT> created at line 51.
+    Found 9-bit adder for signal <n0029> created at line 51.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  16 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <pe> synthesized.
+
+Synthesizing Unit <TreeAdder>.
+    Related source file is "C:\Users\Thomas\Desktop\Britney\IMPLEMENTATION\TreeAdder.vhd".
+    Summary:
+	no macro.
+Unit <TreeAdder> synthesized.
+
+Synthesizing Unit <x16_byte_adder>.
+    Related source file is "C:\Users\Thomas\Desktop\Britney\IMPLEMENTATION\x16_byte_adder.vhd".
+    Summary:
+	no macro.
+Unit <x16_byte_adder> synthesized.
+
+Synthesizing Unit <four_byte_adder>.
+    Related source file is "C:\Users\Thomas\Desktop\Britney\IMPLEMENTATION\four_byte_adder.vhd".
+        bits = 8
+WARNING:Xst:647 - Input <cin> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	no macro.
+Unit <four_byte_adder> synthesized.
+
+Synthesizing Unit <compressor_4_2>.
+    Related source file is "C:\Users\Thomas\Desktop\Britney\IMPLEMENTATION\compressor_4-2.vhd".
+    Summary:
+Unit <compressor_4_2> synthesized.
+
+Synthesizing Unit <generic_9bit_adder>.
+    Related source file is "C:\Users\Thomas\Desktop\Britney\IMPLEMENTATION\generic_9bit_adder.vhd".
+        bits = 9
+    Found 10-bit adder for signal <sum<9:0>> created at line 43.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+Unit <generic_9bit_adder> synthesized.
+
+Synthesizing Unit <four_10bit_word_adder>.
+    Related source file is "C:\Users\Thomas\Desktop\Britney\IMPLEMENTATION\four_10bit_word_adder.vhd".
+        bits = 10
+WARNING:Xst:647 - Input <cin> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	no macro.
+Unit <four_10bit_word_adder> synthesized.
+
+Synthesizing Unit <generic_11bit_adder>.
+    Related source file is "C:\Users\Thomas\Desktop\Britney\IMPLEMENTATION\generic_11bit_adder.vhd".
+        bits = 11
+    Found 12-bit adder for signal <sum<11:0>> created at line 43.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+Unit <generic_11bit_adder> synthesized.
+
+Synthesizing Unit <four_12bit_word_adder>.
+    Related source file is "C:\Users\Thomas\Desktop\Britney\IMPLEMENTATION\four_12bit_word_adder.vhd".
+        bits = 12
+WARNING:Xst:647 - Input <cin> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	no macro.
+Unit <four_12bit_word_adder> synthesized.
+
+Synthesizing Unit <generic_13bit_adder>.
+    Related source file is "C:\Users\Thomas\Desktop\Britney\IMPLEMENTATION\generic_13bit_adder.vhd".
+        bits = 13
+    Found 14-bit adder for signal <sum<13:0>> created at line 43.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+Unit <generic_13bit_adder> synthesized.
+
+Synthesizing Unit <four_14bit_word_adder>.
+    Related source file is "C:\Users\Thomas\Desktop\Britney\IMPLEMENTATION\four_14bit_word_adder.vhd".
+        bits = 14
+WARNING:Xst:647 - Input <cin> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	no macro.
+Unit <four_14bit_word_adder> synthesized.
+
+Synthesizing Unit <generic_15bit_adder>.
+    Related source file is "C:\Users\Thomas\Desktop\Britney\IMPLEMENTATION\generic_15bit_adder.vhd".
+        bits = 15
+    Found 16-bit adder for signal <sum<15:0>> created at line 43.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+Unit <generic_15bit_adder> synthesized.
+
+Synthesizing Unit <COMPARE_Unit>.
+    Related source file is "C:\Users\Thomas\Desktop\Britney\IMPLEMENTATION\COMPARE_Unit.vhd".
+    Summary:
+	no macro.
+Unit <COMPARE_Unit> synthesized.
+
+Synthesizing Unit <X16Comparator>.
+    Related source file is "C:\Users\Thomas\Desktop\Britney\IMPLEMENTATION\X16Comparator.vhd".
+    Found 1-bit register for signal <minSAD<15>>.
+    Found 1-bit register for signal <minSAD<14>>.
+    Found 1-bit register for signal <minSAD<13>>.
+    Found 1-bit register for signal <minSAD<12>>.
+    Found 1-bit register for signal <minSAD<11>>.
+    Found 1-bit register for signal <minSAD<10>>.
+    Found 1-bit register for signal <minSAD<9>>.
+    Found 1-bit register for signal <minSAD<8>>.
+    Found 1-bit register for signal <minSAD<7>>.
+    Found 1-bit register for signal <minSAD<6>>.
+    Found 1-bit register for signal <minSAD<5>>.
+    Found 1-bit register for signal <minSAD<4>>.
+    Found 1-bit register for signal <minSAD<3>>.
+    Found 1-bit register for signal <minSAD<2>>.
+    Found 1-bit register for signal <minSAD<1>>.
+    Found 1-bit register for signal <minSAD<0>>.
+    Found 1-bit register for signal <minPOS<10>>.
+    Found 1-bit register for signal <minPOS<9>>.
+    Found 1-bit register for signal <minPOS<8>>.
+    Found 1-bit register for signal <minPOS<7>>.
+    Found 1-bit register for signal <minPOS<6>>.
+    Found 1-bit register for signal <minPOS<5>>.
+    Found 1-bit register for signal <minPOS<4>>.
+    Found 1-bit register for signal <minPOS<3>>.
+    Found 1-bit register for signal <minPOS<2>>.
+    Found 1-bit register for signal <minPOS<1>>.
+    Found 1-bit register for signal <minPOS<0>>.
+    Found 16-bit comparator equal for signal <aeqb> created at line 43
+    Found 16-bit comparator greater for signal <altb> created at line 44
+    Found 16-bit comparator greater for signal <agtb> created at line 45
+    Summary:
+	inferred  27 D-type flip-flop(s).
+	inferred   3 Comparator(s).
+	inferred  29 Multiplexer(s).
+Unit <X16Comparator> synthesized.
+
+Synthesizing Unit <reg54>.
+    Related source file is "C:\Users\Thomas\Desktop\Britney\IMPLEMENTATION\reg54.vhd".
+        regCount = 54
+    Found 54-bit register for signal <reg_out>.
+    Summary:
+	inferred  54 D-type flip-flop(s).
+Unit <reg54> synthesized.
+
+Synthesizing Unit <Control_Unit>.
+    Related source file is "C:\Users\Thomas\Desktop\Britney\IMPLEMENTATION\Control_Unit.vhd".
+INFO:Xst:3210 - "C:\Users\Thomas\Desktop\Britney\IMPLEMENTATION\Control_Unit.vhd" line 85: Output port <cs_en_cnt> of the instance <SYSCTRL> is unconnected or connected to loadless signal.
+WARNING:Xst:653 - Signal <en_cnt> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Summary:
+	no macro.
+Unit <Control_Unit> synthesized.
+
+Synthesizing Unit <x11bit_counter>.
+    Related source file is "C:\Users\Thomas\Desktop\Britney\IMPLEMENTATION\x15bit_counter.vhd".
+    Found 11-bit register for signal <count>.
+    Found 11-bit adder for signal <count[10]_GND_55_o_add_0_OUT> created at line 21.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  11 D-type flip-flop(s).
+Unit <x11bit_counter> synthesized.
+
+Synthesizing Unit <Controller>.
+    Related source file is "C:\Users\Thomas\Desktop\Britney\IMPLEMENTATION\Controller.vhd".
+WARNING:Xst:653 - Signal <cs_en_cnt> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:737 - Found 1-bit latch for signal <cs_datasel<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <cs_en_CBData>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <cs_en_wr_mem1>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <cs_en_wr_mem2>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <cs_en_col_load>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <cs_colcnt<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <cs_en_wr_mem3>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <cs_en_compare>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <cs_en_rst>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <cs_datasel<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred  10 Latch(s).
+Unit <Controller> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 599
+ 10-bit adder                                          : 64
+ 11-bit adder                                          : 1
+ 12-bit adder                                          : 16
+ 14-bit adder                                          : 4
+ 16-bit adder                                          : 1
+ 6-bit adder                                           : 1
+ 9-bit adder                                           : 256
+ 9-bit subtractor                                      : 256
+# Registers                                            : 1310
+ 1-bit register                                        : 27
+ 11-bit register                                       : 1
+ 54-bit register                                       : 1
+ 6-bit register                                        : 1
+ 8-bit register                                        : 1280
+# Latches                                              : 10
+ 1-bit latch                                           : 10
+# Comparators                                          : 3
+ 16-bit comparator equal                               : 1
+ 16-bit comparator greater                             : 2
+# Multiplexers                                         : 294
+ 1-bit 2-to-1 multiplexer                              : 27
+ 11-bit 2-to-1 multiplexer                             : 1
+ 128-bit 16-to-1 multiplexer                           : 3
+ 128-bit 2-to-1 multiplexer                            : 4
+ 128-bit 4-to-1 multiplexer                            : 1
+ 16-bit 2-to-1 multiplexer                             : 1
+ 6-bit 2-to-1 multiplexer                              : 1
+ 8-bit 2-to-1 multiplexer                              : 256
+# Xors                                                 : 4984
+ 1-bit xor2                                            : 4984
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1710 - FF/Latch <cs_colcnt_5> (without init value) has a constant value of 0 in block <SYSCTRL>. This FF/Latch will be trimmed during the optimization process.
+
+Synthesizing (advanced) Unit <x11bit_counter>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+Unit <x11bit_counter> synthesized (advanced).
+
+Synthesizing (advanced) Unit <x6bit_counter>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+Unit <x6bit_counter> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 597
+ 10-bit adder                                          : 64
+ 12-bit adder                                          : 16
+ 14-bit adder                                          : 4
+ 16-bit adder                                          : 1
+ 8-bit adder                                           : 256
+ 9-bit subtractor                                      : 256
+# Counters                                             : 2
+ 11-bit up counter                                     : 1
+ 6-bit up counter                                      : 1
+# Registers                                            : 10321
+ Flip-Flops                                            : 10321
+# Comparators                                          : 3
+ 16-bit comparator equal                               : 1
+ 16-bit comparator greater                             : 2
+# Multiplexers                                         : 293
+ 1-bit 2-to-1 multiplexer                              : 27
+ 11-bit 2-to-1 multiplexer                             : 1
+ 128-bit 16-to-1 multiplexer                           : 3
+ 128-bit 2-to-1 multiplexer                            : 4
+ 128-bit 4-to-1 multiplexer                            : 1
+ 16-bit 2-to-1 multiplexer                             : 1
+ 8-bit 2-to-1 multiplexer                              : 256
+# Xors                                                 : 4984
+ 1-bit xor2                                            : 4984
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <cs_colcnt_5> (without init value) has a constant value of 0 in block <Controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:3001 - This design contains one or more registers or latches with an active
+   asynchronous set and asynchronous reset. While this circuit can be built,
+   it creates a sub-optimal implementation in terms of area, power and
+   performance. For a more optimal implementation Xilinx highly recommends
+   one of the following:
+
+          1) Remove either the set or reset from all registers and latches if
+             not needed for required functionality
+          2) Modify the code in order to produce a synchronous set
+             and/or reset (both is preferred)
+          3) Use the -async_to_sync option to transform the asynchronous
+             set/reset to synchronous operation
+             (timing simulation highly recommended when using this option)
+
+  Please refer to http://www.xilinx.com search string "Zynq asynchronous set/reset" for more details.
+
+  List of register instances with asynchronous set and reset:
+    minPOS_10 in unit <X16Comparator>
+    minSAD_15 in unit <X16Comparator>
+    minPOS_1 in unit <X16Comparator>
+    minPOS_2 in unit <X16Comparator>
+    minPOS_0 in unit <X16Comparator>
+    minPOS_3 in unit <X16Comparator>
+    minPOS_4 in unit <X16Comparator>
+    minPOS_5 in unit <X16Comparator>
+    minPOS_6 in unit <X16Comparator>
+    minPOS_7 in unit <X16Comparator>
+    minPOS_8 in unit <X16Comparator>
+    minPOS_9 in unit <X16Comparator>
+    minSAD_0 in unit <X16Comparator>
+    minSAD_1 in unit <X16Comparator>
+    minSAD_2 in unit <X16Comparator>
+    minSAD_3 in unit <X16Comparator>
+    minSAD_5 in unit <X16Comparator>
+    minSAD_6 in unit <X16Comparator>
+    minSAD_4 in unit <X16Comparator>
+    minSAD_7 in unit <X16Comparator>
+    minSAD_8 in unit <X16Comparator>
+    minSAD_9 in unit <X16Comparator>
+    minSAD_10 in unit <X16Comparator>
+    minSAD_11 in unit <X16Comparator>
+    minSAD_12 in unit <X16Comparator>
+    minSAD_13 in unit <X16Comparator>
+    minSAD_14 in unit <X16Comparator>
+
+
+Optimizing unit <SubMemory> ...
+
+Optimizing unit <RegCol> ...
+
+Optimizing unit <reg8> ...
+
+Optimizing unit <PE_ARRAY_16X16> ...
+
+Optimizing unit <pe_8x1> ...
+
+Optimizing unit <TreeAdder> ...
+
+Optimizing unit <reg54> ...
+
+Optimizing unit <BRITNEY> ...
+
+Optimizing unit <Controller> ...
+
+Optimizing unit <pe> ...
+
+Optimizing unit <four_byte_adder> ...
+
+Optimizing unit <four_10bit_word_adder> ...
+
+Optimizing unit <four_12bit_word_adder> ...
+
+Optimizing unit <four_14bit_word_adder> ...
+
+Optimizing unit <X16Comparator> ...
+
+Mapping all equations...
+WARNING:Xst:2036 - Inserting OBUF on port <VECTOR<10>> driven by black box <Motion_Vector_Memory>. Possible simulation mismatch.
+WARNING:Xst:2036 - Inserting OBUF on port <VECTOR<9>> driven by black box <Motion_Vector_Memory>. Possible simulation mismatch.
+WARNING:Xst:2036 - Inserting OBUF on port <VECTOR<8>> driven by black box <Motion_Vector_Memory>. Possible simulation mismatch.
+WARNING:Xst:2036 - Inserting OBUF on port <VECTOR<7>> driven by black box <Motion_Vector_Memory>. Possible simulation mismatch.
+WARNING:Xst:2036 - Inserting OBUF on port <VECTOR<6>> driven by black box <Motion_Vector_Memory>. Possible simulation mismatch.
+WARNING:Xst:2036 - Inserting OBUF on port <VECTOR<5>> driven by black box <Motion_Vector_Memory>. Possible simulation mismatch.
+WARNING:Xst:2036 - Inserting OBUF on port <VECTOR<4>> driven by black box <Motion_Vector_Memory>. Possible simulation mismatch.
+WARNING:Xst:2036 - Inserting OBUF on port <VECTOR<3>> driven by black box <Motion_Vector_Memory>. Possible simulation mismatch.
+WARNING:Xst:2036 - Inserting OBUF on port <VECTOR<2>> driven by black box <Motion_Vector_Memory>. Possible simulation mismatch.
+WARNING:Xst:2036 - Inserting OBUF on port <VECTOR<1>> driven by black box <Motion_Vector_Memory>. Possible simulation mismatch.
+WARNING:Xst:2036 - Inserting OBUF on port <VECTOR<0>> driven by black box <Motion_Vector_Memory>. Possible simulation mismatch.
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block BRITNEY, actual ratio is 42.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 10365
+ Flip-Flops                                            : 10365
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : BRITNEY.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 17003
+#      GND                         : 1
+#      INV                         : 2
+#      LUT1                        : 10
+#      LUT2                        : 2309
+#      LUT3                        : 1654
+#      LUT4                        : 1125
+#      LUT5                        : 1474
+#      LUT6                        : 3407
+#      MUXCY                       : 2812
+#      MUXF7                       : 775
+#      MUXF8                       : 384
+#      VCC                         : 1
+#      XORCY                       : 3049
+# FlipFlops/Latches                : 10401
+#      FDC                         : 33
+#      FDCE                        : 10251
+#      FDP                         : 27
+#      FDPE                        : 54
+#      LD                          : 9
+#      LDC                         : 27
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 141
+#      IBUF                        : 130
+#      OBUF                        : 11
+# Others                           : 1
+#      Motion_Vector_Memory        : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7z020clg484-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:           10401  out of  106400     9%  
+ Number of Slice LUTs:                 9981  out of  53200    18%  
+    Number used as Logic:              9981  out of  53200    18%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:  18170
+   Number with an unused Flip Flop:    7769  out of  18170    42%  
+   Number with an unused LUT:          8189  out of  18170    45%  
+   Number of fully used LUT-FF pairs:  2212  out of  18170    12%  
+   Number of unique control sets:        97
+
+IO Utilization: 
+ Number of IOs:                         142
+ Number of bonded IOBs:                 142  out of    200    71%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRL/BUFHCEs:         2  out of    104     1%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+---------------------------------------------------------------------------------------+--------------------------------------------+-------+
+Clock Signal                                                                           | Clock buffer(FF name)                      | Load  |
+---------------------------------------------------------------------------------------+--------------------------------------------+-------+
+CLOCK                                                                                  | BUFGP                                      | 10365 |
+CONTROLUNIT/SYSCTRL/_n0279(CONTROLUNIT/SYSCTRL/_n027914:O)                             | NONE(*)(CONTROLUNIT/SYSCTRL/cs_en_wr_mem3) | 1     |
+CONTROLUNIT/SYSCTRL/_n0278(CONTROLUNIT/SYSCTRL/_n027823:O)                             | NONE(*)(CONTROLUNIT/SYSCTRL/cs_en_col_load)| 1     |
+CONTROLUNIT/SYSCTRL/_n0276(CONTROLUNIT/SYSCTRL/_n027614:O)                             | NONE(*)(CONTROLUNIT/SYSCTRL/cs_en_wr_mem1) | 1     |
+CONTROLUNIT/SYSCTRL/_n0277(CONTROLUNIT/SYSCTRL/_n027716:O)                             | NONE(*)(CONTROLUNIT/SYSCTRL/cs_en_wr_mem2) | 1     |
+CONTROLUNIT/SYSCTRL/_n0271(CONTROLUNIT/SYSCTRL/_n0271216:O)                            | NONE(*)(CONTROLUNIT/SYSCTRL/cs_datasel_1)  | 2     |
+CONTROLUNIT/SYSCTRL/_n0280(CONTROLUNIT/SYSCTRL/_n028013:O)                             | NONE(*)(CONTROLUNIT/SYSCTRL/cs_en_compare) | 1     |
+CONTROLUNIT/SYSCTRL/_n0274(CONTROLUNIT/SYSCTRL/_n0274521:O)                            | NONE(*)(CONTROLUNIT/SYSCTRL/cs_en_rst)     | 1     |
+CONTROLUNIT/SYSCTRL/_n0275(CONTROLUNIT/SYSCTRL/_n027511:O)                             | NONE(*)(CONTROLUNIT/SYSCTRL/cs_en_CBData)  | 1     |
+COMPARATOR/COMP/altb_pos_cur[10]_AND_41_o(COMPARATOR/COMP/altb_pos_cur[10]_AND_41_o1:O)| NONE(*)(COMPARATOR/COMP/minPOS_10_LDC)     | 1     |
+COMPARATOR/COMP/altb_sad_cur[15]_AND_9_o(COMPARATOR/COMP/altb_sad_cur[15]_AND_9_o1:O)  | NONE(*)(COMPARATOR/COMP/minSAD_15_LDC)     | 1     |
+COMPARATOR/COMP/altb_pos_cur[1]_AND_59_o(COMPARATOR/COMP/altb_pos_cur[1]_AND_59_o1:O)  | NONE(*)(COMPARATOR/COMP/minPOS_1_LDC)      | 1     |
+COMPARATOR/COMP/altb_pos_cur[2]_AND_57_o(COMPARATOR/COMP/altb_pos_cur[2]_AND_57_o1:O)  | NONE(*)(COMPARATOR/COMP/minPOS_2_LDC)      | 1     |
+COMPARATOR/COMP/altb_pos_cur[0]_AND_61_o(COMPARATOR/COMP/altb_pos_cur[0]_AND_61_o1:O)  | NONE(*)(COMPARATOR/COMP/minPOS_0_LDC)      | 1     |
+COMPARATOR/COMP/altb_pos_cur[3]_AND_55_o(COMPARATOR/COMP/altb_pos_cur[3]_AND_55_o1:O)  | NONE(*)(COMPARATOR/COMP/minPOS_3_LDC)      | 1     |
+COMPARATOR/COMP/altb_pos_cur[4]_AND_53_o(COMPARATOR/COMP/altb_pos_cur[4]_AND_53_o1:O)  | NONE(*)(COMPARATOR/COMP/minPOS_4_LDC)      | 1     |
+COMPARATOR/COMP/altb_pos_cur[5]_AND_51_o(COMPARATOR/COMP/altb_pos_cur[5]_AND_51_o1:O)  | NONE(*)(COMPARATOR/COMP/minPOS_5_LDC)      | 1     |
+COMPARATOR/COMP/altb_pos_cur[6]_AND_49_o(COMPARATOR/COMP/altb_pos_cur[6]_AND_49_o1:O)  | NONE(*)(COMPARATOR/COMP/minPOS_6_LDC)      | 1     |
+COMPARATOR/COMP/altb_pos_cur[7]_AND_47_o(COMPARATOR/COMP/altb_pos_cur[7]_AND_47_o1:O)  | NONE(*)(COMPARATOR/COMP/minPOS_7_LDC)      | 1     |
+COMPARATOR/COMP/altb_pos_cur[8]_AND_45_o(COMPARATOR/COMP/altb_pos_cur[8]_AND_45_o1:O)  | NONE(*)(COMPARATOR/COMP/minPOS_8_LDC)      | 1     |
+COMPARATOR/COMP/altb_pos_cur[9]_AND_43_o(COMPARATOR/COMP/altb_pos_cur[9]_AND_43_o1:O)  | NONE(*)(COMPARATOR/COMP/minPOS_9_LDC)      | 1     |
+COMPARATOR/COMP/altb_sad_cur[0]_AND_39_o(COMPARATOR/COMP/altb_sad_cur[0]_AND_39_o1:O)  | NONE(*)(COMPARATOR/COMP/minSAD_0_LDC)      | 1     |
+COMPARATOR/COMP/altb_sad_cur[1]_AND_37_o(COMPARATOR/COMP/altb_sad_cur[1]_AND_37_o1:O)  | NONE(*)(COMPARATOR/COMP/minSAD_1_LDC)      | 1     |
+COMPARATOR/COMP/altb_sad_cur[2]_AND_35_o(COMPARATOR/COMP/altb_sad_cur[2]_AND_35_o1:O)  | NONE(*)(COMPARATOR/COMP/minSAD_2_LDC)      | 1     |
+COMPARATOR/COMP/altb_sad_cur[3]_AND_33_o(COMPARATOR/COMP/altb_sad_cur[3]_AND_33_o1:O)  | NONE(*)(COMPARATOR/COMP/minSAD_3_LDC)      | 1     |
+COMPARATOR/COMP/altb_sad_cur[5]_AND_29_o(COMPARATOR/COMP/altb_sad_cur[5]_AND_29_o1:O)  | NONE(*)(COMPARATOR/COMP/minSAD_5_LDC)      | 1     |
+COMPARATOR/COMP/altb_sad_cur[6]_AND_27_o(COMPARATOR/COMP/altb_sad_cur[6]_AND_27_o1:O)  | NONE(*)(COMPARATOR/COMP/minSAD_6_LDC)      | 1     |
+COMPARATOR/COMP/altb_sad_cur[4]_AND_31_o(COMPARATOR/COMP/altb_sad_cur[4]_AND_31_o1:O)  | NONE(*)(COMPARATOR/COMP/minSAD_4_LDC)      | 1     |
+COMPARATOR/COMP/altb_sad_cur[7]_AND_25_o(COMPARATOR/COMP/altb_sad_cur[7]_AND_25_o1:O)  | NONE(*)(COMPARATOR/COMP/minSAD_7_LDC)      | 1     |
+COMPARATOR/COMP/altb_sad_cur[8]_AND_23_o(COMPARATOR/COMP/altb_sad_cur[8]_AND_23_o1:O)  | NONE(*)(COMPARATOR/COMP/minSAD_8_LDC)      | 1     |
+COMPARATOR/COMP/altb_sad_cur[9]_AND_21_o(COMPARATOR/COMP/altb_sad_cur[9]_AND_21_o1:O)  | NONE(*)(COMPARATOR/COMP/minSAD_9_LDC)      | 1     |
+COMPARATOR/COMP/altb_sad_cur[10]_AND_19_o(COMPARATOR/COMP/altb_sad_cur[10]_AND_19_o1:O)| NONE(*)(COMPARATOR/COMP/minSAD_10_LDC)     | 1     |
+COMPARATOR/COMP/altb_sad_cur[11]_AND_17_o(COMPARATOR/COMP/altb_sad_cur[11]_AND_17_o1:O)| NONE(*)(COMPARATOR/COMP/minSAD_11_LDC)     | 1     |
+COMPARATOR/COMP/altb_sad_cur[12]_AND_15_o(COMPARATOR/COMP/altb_sad_cur[12]_AND_15_o1:O)| NONE(*)(COMPARATOR/COMP/minSAD_12_LDC)     | 1     |
+COMPARATOR/COMP/altb_sad_cur[13]_AND_13_o(COMPARATOR/COMP/altb_sad_cur[13]_AND_13_o1:O)| NONE(*)(COMPARATOR/COMP/minSAD_13_LDC)     | 1     |
+COMPARATOR/COMP/altb_sad_cur[14]_AND_11_o(COMPARATOR/COMP/altb_sad_cur[14]_AND_11_o1:O)| NONE(*)(COMPARATOR/COMP/minSAD_14_LDC)     | 1     |
+---------------------------------------------------------------------------------------+--------------------------------------------+-------+
+(*) These 35 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 7.572ns (Maximum Frequency: 132.072MHz)
+   Minimum input arrival time before clock: 0.605ns
+   Maximum output required time after clock: 1.081ns
+   Maximum combinational path delay: 0.760ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLOCK'
+  Clock period: 7.572ns (frequency: 132.072MHz)
+  Total number of paths / destination ports: 13982915708 / 9907
+-------------------------------------------------------------------------
+Delay:               7.572ns (Levels of Logic = 23)
+  Source:            SADUNIT/PE/R5/RP0/P1/CBR_0 (FF)
+  Destination:       COMPARATOR/REG/reg_out_41 (FF)
+  Source Clock:      CLOCK rising
+  Destination Clock: CLOCK rising
+
+  Data Path: SADUNIT/PE/R5/RP0/P1/CBR_0 to COMPARATOR/REG/reg_out_41
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             2   0.232   0.347  SADUNIT/PE/R5/RP0/P1/CBR_0 (SADUNIT/PE/R5/RP0/P1/CBR_0)
+     LUT2:I0->O            1   0.043   0.000  SADUNIT/PE/R5/RP0/P1/Msub_GND_19_o_GND_19_o_sub_6_OUT_lut<0> (SADUNIT/PE/R5/RP0/P1/Msub_GND_19_o_GND_19_o_sub_6_OUT_lut<0>)
+     MUXCY:S->O            1   0.230   0.000  SADUNIT/PE/R5/RP0/P1/Msub_GND_19_o_GND_19_o_sub_6_OUT_cy<0> (SADUNIT/PE/R5/RP0/P1/Msub_GND_19_o_GND_19_o_sub_6_OUT_cy<0>)
+     XORCY:CI->O           9   0.251   0.465  SADUNIT/PE/R5/RP0/P1/Msub_GND_19_o_GND_19_o_sub_6_OUT_xor<1> (SADUNIT/PE/R5/RP0/P1/GND_19_o_GND_19_o_sub_6_OUT<1>)
+     LUT4:I1->O            1   0.043   0.289  SADUNIT/PE/R5/RP0/P1/DIFF_O<7>_SW0 (N1067)
+     LUT6:I5->O            4   0.043   0.470  SADUNIT/PE/R5/RP0/P1/DIFF_O<7> (SADUNIT/intdata<655>)
+     LUT4:I0->O            1   0.043   0.289  SADUNIT/TREE/x16inst[6].X16/A4/G9/Madd_sum<9:0>_lut<7>_SW0 (N2679)
+     LUT6:I5->O            1   0.043   0.000  SADUNIT/TREE/x16inst[6].X16/A4/G9/Madd_sum<9:0>_lut<7> (SADUNIT/TREE/x16inst[6].X16/A4/G9/Madd_sum<9:0>_lut<7>)
+     MUXCY:S->O            1   0.230   0.000  SADUNIT/TREE/x16inst[6].X16/A4/G9/Madd_sum<9:0>_cy<7> (SADUNIT/TREE/x16inst[6].X16/A4/G9/Madd_sum<9:0>_cy<7>)
+     XORCY:CI->O           4   0.251   0.470  SADUNIT/TREE/x16inst[6].X16/A4/G9/Madd_sum<9:0>_xor<8> (SADUNIT/TREE/x16inst[6].X16/int<8>)
+     LUT4:I0->O            1   0.043   0.289  SADUNIT/TREE/x16inst[6].X16/FA/G11/Madd_sum<11:0>_lut<8>_SW0 (N2252)
+     LUT6:I5->O            1   0.043   0.000  SADUNIT/TREE/x16inst[6].X16/FA/G11/Madd_sum<11:0>_lut<8> (SADUNIT/TREE/x16inst[6].X16/FA/G11/Madd_sum<11:0>_lut<8>)
+     MUXCY:S->O            1   0.230   0.000  SADUNIT/TREE/x16inst[6].X16/FA/G11/Madd_sum<11:0>_cy<8> (SADUNIT/TREE/x16inst[6].X16/FA/G11/Madd_sum<11:0>_cy<8>)
+     XORCY:CI->O           4   0.251   0.442  SADUNIT/TREE/x16inst[6].X16/FA/G11/Madd_sum<11:0>_xor<9> (SADUNIT/TREE/bus192<69>)
+     LUT3:I0->O            2   0.043   0.293  SADUNIT/TREE/f12inst[2].F12/instances[9].A/cout1 (SADUNIT/TREE/f12inst[2].F12/int<9>)
+     LUT5:I4->O            1   0.043   0.289  SADUNIT/TREE/f12inst[2].F12/instances[11].A/Mxor_sum_xo<0>1_SW0 (N2438)
+     LUT6:I5->O            1   0.043   0.000  SADUNIT/TREE/f12inst[2].F12/G13/Madd_sum<13:0>_lut<11> (SADUNIT/TREE/f12inst[2].F12/G13/Madd_sum<13:0>_lut<11>)
+     MUXCY:S->O            1   0.230   0.000  SADUNIT/TREE/f12inst[2].F12/G13/Madd_sum<13:0>_cy<11> (SADUNIT/TREE/f12inst[2].F12/G13/Madd_sum<13:0>_cy<11>)
+     XORCY:CI->O           4   0.251   0.470  SADUNIT/TREE/f12inst[2].F12/G13/Madd_sum<13:0>_xor<12> (SADUNIT/TREE/bus56<26>)
+     LUT4:I0->O            1   0.043   0.289  SADUNIT/TREE/F14/G15/Madd_sum<15:0>_lut<12>_SW0 (N3805)
+     LUT6:I5->O            1   0.043   0.000  SADUNIT/TREE/F14/G15/Madd_sum<15:0>_lut<12> (SADUNIT/TREE/F14/G15/Madd_sum<15:0>_lut<12>)
+     MUXCY:S->O            1   0.230   0.000  SADUNIT/TREE/F14/G15/Madd_sum<15:0>_cy<12> (SADUNIT/TREE/F14/G15/Madd_sum<15:0>_cy<12>)
+     MUXCY:CI->O           1   0.013   0.000  SADUNIT/TREE/F14/G15/Madd_sum<15:0>_cy<13> (SADUNIT/TREE/F14/G15/Madd_sum<15:0>_cy<13>)
+     XORCY:CI->O           1   0.251   0.000  SADUNIT/TREE/F14/G15/Madd_sum<15:0>_xor<14> (sadunit_sum<14>)
+     FDPE:D                   -0.001          COMPARATOR/REG/reg_out_41
+    ----------------------------------------
+    Total                      7.572ns (3.166ns logic, 4.406ns route)
+                                       (41.8% logic, 58.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLOCK'
+  Total number of paths / destination ports: 577 / 577
+-------------------------------------------------------------------------
+Offset:              0.605ns (Levels of Logic = 2)
+  Source:            RESET (PAD)
+  Destination:       COMPARATOR/COMP/minPOS_10_C_10 (FF)
+  Destination Clock: CLOCK rising
+
+  Data Path: RESET to COMPARATOR/COMP/minPOS_10_C_10
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            28   0.000   0.562  RESET_IBUF (RESET_IBUF)
+     LUT5:I1->O            2   0.043   0.000  COMPARATOR/COMP/Mmux_minPOS[10]_PWR_34_o_mux_5_OUT12 (COMPARATOR/COMP/minPOS[10]_PWR_34_o_mux_5_OUT<0>)
+     FDC:D                    -0.001          COMPARATOR/COMP/minPOS_0_C_0
+    ----------------------------------------
+    Total                      0.605ns (0.043ns logic, 0.562ns route)
+                                       (7.1% logic, 92.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'COMPARATOR/COMP/altb_pos_cur[10]_AND_41_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.081ns (Levels of Logic = 1)
+  Source:            COMPARATOR/COMP/minPOS_10_LDC (LATCH)
+  Destination:       MVMEMORY:din<10> (PAD)
+  Source Clock:      COMPARATOR/COMP/altb_pos_cur[10]_AND_41_o falling
+
+  Data Path: COMPARATOR/COMP/minPOS_10_LDC to MVMEMORY:din<10>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              2   0.326   0.433  COMPARATOR/COMP/minPOS_10_LDC (COMPARATOR/COMP/minPOS_10_LDC)
+     LUT3:I0->O            1   0.043   0.279  COMPARATOR/COMP/minPOS_101 (COMPARATOR/COMP/minPOS_10)
+    Motion_Vector_Memory:din<10>        0.000          MVMEMORY
+    ----------------------------------------
+    Total                      1.081ns (0.369ns logic, 0.712ns route)
+                                       (34.1% logic, 65.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLOCK'
+  Total number of paths / destination ports: 22 / 11
+-------------------------------------------------------------------------
+Offset:              0.902ns (Levels of Logic = 1)
+  Source:            COMPARATOR/COMP/minPOS_10_C_10 (FF)
+  Destination:       MVMEMORY:din<10> (PAD)
+  Source Clock:      CLOCK rising
+
+  Data Path: COMPARATOR/COMP/minPOS_10_C_10 to MVMEMORY:din<10>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.232   0.347  COMPARATOR/COMP/minPOS_10_C_10 (COMPARATOR/COMP/minPOS_10_C_10)
+     LUT3:I1->O            1   0.043   0.279  COMPARATOR/COMP/minPOS_101 (COMPARATOR/COMP/minPOS_10)
+    Motion_Vector_Memory:din<10>        0.000          MVMEMORY
+    ----------------------------------------
+    Total                      0.902ns (0.275ns logic, 0.627ns route)
+                                       (30.5% logic, 69.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'COMPARATOR/COMP/altb_pos_cur[9]_AND_43_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.081ns (Levels of Logic = 1)
+  Source:            COMPARATOR/COMP/minPOS_9_LDC (LATCH)
+  Destination:       MVMEMORY:din<9> (PAD)
+  Source Clock:      COMPARATOR/COMP/altb_pos_cur[9]_AND_43_o falling
+
+  Data Path: COMPARATOR/COMP/minPOS_9_LDC to MVMEMORY:din<9>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              2   0.326   0.433  COMPARATOR/COMP/minPOS_9_LDC (COMPARATOR/COMP/minPOS_9_LDC)
+     LUT3:I0->O            1   0.043   0.279  COMPARATOR/COMP/minPOS_91 (COMPARATOR/COMP/minPOS_9)
+    Motion_Vector_Memory:din<9>        0.000          MVMEMORY
+    ----------------------------------------
+    Total                      1.081ns (0.369ns logic, 0.712ns route)
+                                       (34.1% logic, 65.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'COMPARATOR/COMP/altb_pos_cur[8]_AND_45_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.081ns (Levels of Logic = 1)
+  Source:            COMPARATOR/COMP/minPOS_8_LDC (LATCH)
+  Destination:       MVMEMORY:din<8> (PAD)
+  Source Clock:      COMPARATOR/COMP/altb_pos_cur[8]_AND_45_o falling
+
+  Data Path: COMPARATOR/COMP/minPOS_8_LDC to MVMEMORY:din<8>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              2   0.326   0.433  COMPARATOR/COMP/minPOS_8_LDC (COMPARATOR/COMP/minPOS_8_LDC)
+     LUT3:I0->O            1   0.043   0.279  COMPARATOR/COMP/minPOS_81 (COMPARATOR/COMP/minPOS_8)
+    Motion_Vector_Memory:din<8>        0.000          MVMEMORY
+    ----------------------------------------
+    Total                      1.081ns (0.369ns logic, 0.712ns route)
+                                       (34.1% logic, 65.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'COMPARATOR/COMP/altb_pos_cur[7]_AND_47_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.081ns (Levels of Logic = 1)
+  Source:            COMPARATOR/COMP/minPOS_7_LDC (LATCH)
+  Destination:       MVMEMORY:din<7> (PAD)
+  Source Clock:      COMPARATOR/COMP/altb_pos_cur[7]_AND_47_o falling
+
+  Data Path: COMPARATOR/COMP/minPOS_7_LDC to MVMEMORY:din<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              2   0.326   0.433  COMPARATOR/COMP/minPOS_7_LDC (COMPARATOR/COMP/minPOS_7_LDC)
+     LUT3:I0->O            1   0.043   0.279  COMPARATOR/COMP/minPOS_71 (COMPARATOR/COMP/minPOS_7)
+    Motion_Vector_Memory:din<7>        0.000          MVMEMORY
+    ----------------------------------------
+    Total                      1.081ns (0.369ns logic, 0.712ns route)
+                                       (34.1% logic, 65.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'COMPARATOR/COMP/altb_pos_cur[6]_AND_49_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.081ns (Levels of Logic = 1)
+  Source:            COMPARATOR/COMP/minPOS_6_LDC (LATCH)
+  Destination:       MVMEMORY:din<6> (PAD)
+  Source Clock:      COMPARATOR/COMP/altb_pos_cur[6]_AND_49_o falling
+
+  Data Path: COMPARATOR/COMP/minPOS_6_LDC to MVMEMORY:din<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              2   0.326   0.433  COMPARATOR/COMP/minPOS_6_LDC (COMPARATOR/COMP/minPOS_6_LDC)
+     LUT3:I0->O            1   0.043   0.279  COMPARATOR/COMP/minPOS_61 (COMPARATOR/COMP/minPOS_6)
+    Motion_Vector_Memory:din<6>        0.000          MVMEMORY
+    ----------------------------------------
+    Total                      1.081ns (0.369ns logic, 0.712ns route)
+                                       (34.1% logic, 65.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'COMPARATOR/COMP/altb_pos_cur[5]_AND_51_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.081ns (Levels of Logic = 1)
+  Source:            COMPARATOR/COMP/minPOS_5_LDC (LATCH)
+  Destination:       MVMEMORY:din<5> (PAD)
+  Source Clock:      COMPARATOR/COMP/altb_pos_cur[5]_AND_51_o falling
+
+  Data Path: COMPARATOR/COMP/minPOS_5_LDC to MVMEMORY:din<5>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              2   0.326   0.433  COMPARATOR/COMP/minPOS_5_LDC (COMPARATOR/COMP/minPOS_5_LDC)
+     LUT3:I0->O            1   0.043   0.279  COMPARATOR/COMP/minPOS_51 (COMPARATOR/COMP/minPOS_5)
+    Motion_Vector_Memory:din<5>        0.000          MVMEMORY
+    ----------------------------------------
+    Total                      1.081ns (0.369ns logic, 0.712ns route)
+                                       (34.1% logic, 65.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'COMPARATOR/COMP/altb_pos_cur[4]_AND_53_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.081ns (Levels of Logic = 1)
+  Source:            COMPARATOR/COMP/minPOS_4_LDC (LATCH)
+  Destination:       MVMEMORY:din<4> (PAD)
+  Source Clock:      COMPARATOR/COMP/altb_pos_cur[4]_AND_53_o falling
+
+  Data Path: COMPARATOR/COMP/minPOS_4_LDC to MVMEMORY:din<4>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              2   0.326   0.433  COMPARATOR/COMP/minPOS_4_LDC (COMPARATOR/COMP/minPOS_4_LDC)
+     LUT3:I0->O            1   0.043   0.279  COMPARATOR/COMP/minPOS_41 (COMPARATOR/COMP/minPOS_4)
+    Motion_Vector_Memory:din<4>        0.000          MVMEMORY
+    ----------------------------------------
+    Total                      1.081ns (0.369ns logic, 0.712ns route)
+                                       (34.1% logic, 65.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'COMPARATOR/COMP/altb_pos_cur[3]_AND_55_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.081ns (Levels of Logic = 1)
+  Source:            COMPARATOR/COMP/minPOS_3_LDC (LATCH)
+  Destination:       MVMEMORY:din<3> (PAD)
+  Source Clock:      COMPARATOR/COMP/altb_pos_cur[3]_AND_55_o falling
+
+  Data Path: COMPARATOR/COMP/minPOS_3_LDC to MVMEMORY:din<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              2   0.326   0.433  COMPARATOR/COMP/minPOS_3_LDC (COMPARATOR/COMP/minPOS_3_LDC)
+     LUT3:I0->O            1   0.043   0.279  COMPARATOR/COMP/minPOS_31 (COMPARATOR/COMP/minPOS_3)
+    Motion_Vector_Memory:din<3>        0.000          MVMEMORY
+    ----------------------------------------
+    Total                      1.081ns (0.369ns logic, 0.712ns route)
+                                       (34.1% logic, 65.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'COMPARATOR/COMP/altb_pos_cur[2]_AND_57_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.081ns (Levels of Logic = 1)
+  Source:            COMPARATOR/COMP/minPOS_2_LDC (LATCH)
+  Destination:       MVMEMORY:din<2> (PAD)
+  Source Clock:      COMPARATOR/COMP/altb_pos_cur[2]_AND_57_o falling
+
+  Data Path: COMPARATOR/COMP/minPOS_2_LDC to MVMEMORY:din<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              2   0.326   0.433  COMPARATOR/COMP/minPOS_2_LDC (COMPARATOR/COMP/minPOS_2_LDC)
+     LUT3:I0->O            1   0.043   0.279  COMPARATOR/COMP/minPOS_21 (COMPARATOR/COMP/minPOS_2)
+    Motion_Vector_Memory:din<2>        0.000          MVMEMORY
+    ----------------------------------------
+    Total                      1.081ns (0.369ns logic, 0.712ns route)
+                                       (34.1% logic, 65.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'COMPARATOR/COMP/altb_pos_cur[1]_AND_59_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.081ns (Levels of Logic = 1)
+  Source:            COMPARATOR/COMP/minPOS_1_LDC (LATCH)
+  Destination:       MVMEMORY:din<1> (PAD)
+  Source Clock:      COMPARATOR/COMP/altb_pos_cur[1]_AND_59_o falling
+
+  Data Path: COMPARATOR/COMP/minPOS_1_LDC to MVMEMORY:din<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              2   0.326   0.433  COMPARATOR/COMP/minPOS_1_LDC (COMPARATOR/COMP/minPOS_1_LDC)
+     LUT3:I0->O            1   0.043   0.279  COMPARATOR/COMP/minPOS_11 (COMPARATOR/COMP/minPOS_1)
+    Motion_Vector_Memory:din<1>        0.000          MVMEMORY
+    ----------------------------------------
+    Total                      1.081ns (0.369ns logic, 0.712ns route)
+                                       (34.1% logic, 65.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'COMPARATOR/COMP/altb_pos_cur[0]_AND_61_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.081ns (Levels of Logic = 1)
+  Source:            COMPARATOR/COMP/minPOS_0_LDC (LATCH)
+  Destination:       MVMEMORY:din<0> (PAD)
+  Source Clock:      COMPARATOR/COMP/altb_pos_cur[0]_AND_61_o falling
+
+  Data Path: COMPARATOR/COMP/minPOS_0_LDC to MVMEMORY:din<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              2   0.326   0.433  COMPARATOR/COMP/minPOS_0_LDC (COMPARATOR/COMP/minPOS_0_LDC)
+     LUT3:I0->O            1   0.043   0.279  COMPARATOR/COMP/minPOS_01 (COMPARATOR/COMP/minPOS_0)
+    Motion_Vector_Memory:din<0>        0.000          MVMEMORY
+    ----------------------------------------
+    Total                      1.081ns (0.369ns logic, 0.712ns route)
+                                       (34.1% logic, 65.9% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 12 / 12
+-------------------------------------------------------------------------
+Delay:               0.760ns (Levels of Logic = 1)
+  Source:            CLOCK (PAD)
+  Destination:       MVMEMORY:clk (PAD)
+
+  Data Path: CLOCK to MVMEMORY:clk
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     BUFGP:I->O         10365   0.000   0.760  CLOCK_BUFGP (CLOCK_BUFGP)
+    Motion_Vector_Memory:clk        0.000          MVMEMORY
+    ----------------------------------------
+    Total                      0.760ns (0.000ns logic, 0.760ns route)
+                                       (0.0% logic, 100.0% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock CLOCK
+-----------------------------------------+---------+---------+---------+---------+
+                                         | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                             |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------------------+---------+---------+---------+---------+
+CLOCK                                    |    7.572|         |         |         |
+COMPARATOR/COMP/altb_pos_cur[0]_AND_61_o |         |    0.801|         |         |
+COMPARATOR/COMP/altb_pos_cur[10]_AND_41_o|         |    0.801|         |         |
+COMPARATOR/COMP/altb_pos_cur[1]_AND_59_o |         |    0.801|         |         |
+COMPARATOR/COMP/altb_pos_cur[2]_AND_57_o |         |    0.801|         |         |
+COMPARATOR/COMP/altb_pos_cur[3]_AND_55_o |         |    0.801|         |         |
+COMPARATOR/COMP/altb_pos_cur[4]_AND_53_o |         |    0.801|         |         |
+COMPARATOR/COMP/altb_pos_cur[5]_AND_51_o |         |    0.801|         |         |
+COMPARATOR/COMP/altb_pos_cur[6]_AND_49_o |         |    0.801|         |         |
+COMPARATOR/COMP/altb_pos_cur[7]_AND_47_o |         |    0.801|         |         |
+COMPARATOR/COMP/altb_pos_cur[8]_AND_45_o |         |    0.801|         |         |
+COMPARATOR/COMP/altb_pos_cur[9]_AND_43_o |         |    0.801|         |         |
+COMPARATOR/COMP/altb_sad_cur[0]_AND_39_o |         |    0.801|         |         |
+COMPARATOR/COMP/altb_sad_cur[10]_AND_19_o|         |    0.801|         |         |
+COMPARATOR/COMP/altb_sad_cur[11]_AND_17_o|         |    0.801|         |         |
+COMPARATOR/COMP/altb_sad_cur[12]_AND_15_o|         |    0.801|         |         |
+COMPARATOR/COMP/altb_sad_cur[13]_AND_13_o|         |    0.801|         |         |
+COMPARATOR/COMP/altb_sad_cur[14]_AND_11_o|         |    0.801|         |         |
+COMPARATOR/COMP/altb_sad_cur[15]_AND_9_o |         |    0.801|         |         |
+COMPARATOR/COMP/altb_sad_cur[1]_AND_37_o |         |    0.801|         |         |
+COMPARATOR/COMP/altb_sad_cur[2]_AND_35_o |         |    0.801|         |         |
+COMPARATOR/COMP/altb_sad_cur[3]_AND_33_o |         |    0.801|         |         |
+COMPARATOR/COMP/altb_sad_cur[4]_AND_31_o |         |    0.801|         |         |
+COMPARATOR/COMP/altb_sad_cur[5]_AND_29_o |         |    0.801|         |         |
+COMPARATOR/COMP/altb_sad_cur[6]_AND_27_o |         |    0.801|         |         |
+COMPARATOR/COMP/altb_sad_cur[7]_AND_25_o |         |    0.801|         |         |
+COMPARATOR/COMP/altb_sad_cur[8]_AND_23_o |         |    0.801|         |         |
+COMPARATOR/COMP/altb_sad_cur[9]_AND_21_o |         |    0.801|         |         |
+CONTROLUNIT/SYSCTRL/_n0271               |         |    0.976|         |         |
+CONTROLUNIT/SYSCTRL/_n0274               |         |    1.017|         |         |
+CONTROLUNIT/SYSCTRL/_n0275               |         |    1.543|         |         |
+CONTROLUNIT/SYSCTRL/_n0276               |         |    0.984|         |         |
+CONTROLUNIT/SYSCTRL/_n0277               |         |    0.984|         |         |
+CONTROLUNIT/SYSCTRL/_n0278               |         |    0.942|         |         |
+CONTROLUNIT/SYSCTRL/_n0279               |         |    0.984|         |         |
+CONTROLUNIT/SYSCTRL/_n0280               |         |    0.868|         |         |
+-----------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock COMPARATOR/COMP/altb_pos_cur[0]_AND_61_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLOCK          |         |         |    2.680|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock COMPARATOR/COMP/altb_pos_cur[10]_AND_41_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLOCK          |         |         |    2.680|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock COMPARATOR/COMP/altb_pos_cur[1]_AND_59_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLOCK          |         |         |    2.680|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock COMPARATOR/COMP/altb_pos_cur[2]_AND_57_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLOCK          |         |         |    2.680|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock COMPARATOR/COMP/altb_pos_cur[3]_AND_55_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLOCK          |         |         |    2.680|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock COMPARATOR/COMP/altb_pos_cur[4]_AND_53_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLOCK          |         |         |    2.680|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock COMPARATOR/COMP/altb_pos_cur[5]_AND_51_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLOCK          |         |         |    2.680|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock COMPARATOR/COMP/altb_pos_cur[6]_AND_49_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLOCK          |         |         |    2.680|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock COMPARATOR/COMP/altb_pos_cur[7]_AND_47_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLOCK          |         |         |    2.680|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock COMPARATOR/COMP/altb_pos_cur[8]_AND_45_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLOCK          |         |         |    2.680|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock COMPARATOR/COMP/altb_pos_cur[9]_AND_43_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLOCK          |         |         |    2.680|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock COMPARATOR/COMP/altb_sad_cur[0]_AND_39_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLOCK          |         |         |    2.680|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock COMPARATOR/COMP/altb_sad_cur[10]_AND_19_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLOCK          |         |         |    2.680|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock COMPARATOR/COMP/altb_sad_cur[11]_AND_17_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLOCK          |         |         |    2.680|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock COMPARATOR/COMP/altb_sad_cur[12]_AND_15_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLOCK          |         |         |    2.680|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock COMPARATOR/COMP/altb_sad_cur[13]_AND_13_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLOCK          |         |         |    2.680|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock COMPARATOR/COMP/altb_sad_cur[14]_AND_11_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLOCK          |         |         |    2.680|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock COMPARATOR/COMP/altb_sad_cur[15]_AND_9_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLOCK          |         |         |    2.680|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock COMPARATOR/COMP/altb_sad_cur[1]_AND_37_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLOCK          |         |         |    2.680|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock COMPARATOR/COMP/altb_sad_cur[2]_AND_35_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLOCK          |         |         |    2.680|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock COMPARATOR/COMP/altb_sad_cur[3]_AND_33_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLOCK          |         |         |    2.680|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock COMPARATOR/COMP/altb_sad_cur[4]_AND_31_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLOCK          |         |         |    2.680|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock COMPARATOR/COMP/altb_sad_cur[5]_AND_29_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLOCK          |         |         |    2.680|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock COMPARATOR/COMP/altb_sad_cur[6]_AND_27_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLOCK          |         |         |    2.680|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock COMPARATOR/COMP/altb_sad_cur[7]_AND_25_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLOCK          |         |         |    2.680|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock COMPARATOR/COMP/altb_sad_cur[8]_AND_23_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLOCK          |         |         |    2.680|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock COMPARATOR/COMP/altb_sad_cur[9]_AND_21_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLOCK          |         |         |    2.680|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock CONTROLUNIT/SYSCTRL/_n0271
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLOCK          |         |         |    2.475|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock CONTROLUNIT/SYSCTRL/_n0274
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLOCK          |         |         |    1.265|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock CONTROLUNIT/SYSCTRL/_n0275
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLOCK          |         |         |    1.649|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock CONTROLUNIT/SYSCTRL/_n0276
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLOCK          |         |         |    2.275|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock CONTROLUNIT/SYSCTRL/_n0277
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLOCK          |         |         |    2.401|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock CONTROLUNIT/SYSCTRL/_n0278
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLOCK          |         |         |    2.316|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock CONTROLUNIT/SYSCTRL/_n0279
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLOCK          |         |         |    2.595|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock CONTROLUNIT/SYSCTRL/_n0280
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLOCK          |         |         |    1.649|         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 50.00 secs
+Total CPU time to Xst completion: 49.98 secs
+ 
+--> 
+
+Total memory usage is 586236 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   34 (   0 filtered)
+Number of infos    :    8 (   0 filtered)
+

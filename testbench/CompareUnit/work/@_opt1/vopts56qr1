@@ -1,0 +1,172 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Thomas\Desktop\Britney\TESTBENCHES\ControlUnit
+T_opt
+V]@Z=o2jKLj5kA6kRYWe6<2
+04 14 10 work compareunit_tb behavioral 1
+=1-bcee7b7467f0-578d69b5-172-11d8
+Z1 o-quiet -auto_acc_if_foreign -work work
+n@_opt
+Z2 OL;O;10.1c;51
+Z3 dC:\Users\Thomas\Desktop\Britney\TESTBENCHES\ControlUnit
+T_opt1
+VnzFBVIJeoz;]c`ZWD^G@K3
+04 12 10 work compare_unit behavioral 1
+=1-bcee7b7467f0-578d6bcc-1c4-1780
+R1
+n@_opt1
+R2
+Ecompare_unit
+Z4 w1468885940
+Z5 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z6 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z7 dC:\Users\Thomas\Desktop\Britney\TESTBENCHES\CompareUnit
+Z8 8C:/Users/Thomas/Desktop/Britney/TESTBENCHES/CompareUnit/COMPARE_Unit.vhd
+Z9 FC:/Users/Thomas/Desktop/Britney/TESTBENCHES/CompareUnit/COMPARE_Unit.vhd
+l0
+L4
+V[lOmI?h4c2jRPiL3??a=O3
+Z10 OL;C;10.1c;51
+32
+Z11 !s108 1468885949.457000
+Z12 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|C:/Users/Thomas/Desktop/Britney/TESTBENCHES/CompareUnit/COMPARE_Unit.vhd|
+Z13 !s107 C:/Users/Thomas/Desktop/Britney/TESTBENCHES/CompareUnit/COMPARE_Unit.vhd|
+Z14 o-work work -2002 -explicit
+Z15 tExplicit 1
+!s100 Jl4=eQ3Fk8eb9[<ZJPdAZ3
+!i10b 1
+Abehavioral
+R5
+R6
+DEx4 work 12 compare_unit 0 22 [lOmI?h4c2jRPiL3??a=O3
+l45
+L16
+V?Mcg4H[9EVMEIiH;DIQJ<3
+!s100 _E<P]9a2[>mOZ37>dWR4X1
+R10
+32
+R11
+R12
+R13
+R14
+R15
+!i10b 1
+Ecompareunit_tb
+Z16 w1468885387
+Z17 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
+Z18 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
+R5
+R6
+R7
+Z19 8C:/Users/Thomas/Desktop/Britney/TESTBENCHES/CompareUnit/TESTBENCH.vhd
+Z20 FC:/Users/Thomas/Desktop/Britney/TESTBENCHES/CompareUnit/TESTBENCH.vhd
+l0
+L6
+VQPzDY95n[9EoY;WF<17@?2
+R10
+32
+Z21 !s108 1468885391.610000
+Z22 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|C:/Users/Thomas/Desktop/Britney/TESTBENCHES/CompareUnit/TESTBENCH.vhd|
+Z23 !s107 C:/Users/Thomas/Desktop/Britney/TESTBENCHES/CompareUnit/TESTBENCH.vhd|
+R14
+R15
+!s100 V9lJfe9kYbV6Qc3BM:>D^3
+!i10b 1
+Abehavioral
+R17
+R18
+R5
+R6
+DEx4 work 14 compareunit_tb 0 22 QPzDY95n[9EoY;WF<17@?2
+l39
+L9
+VJRBdSbCdK]0>Si57YE5OV3
+R10
+32
+R21
+R22
+R23
+R14
+R15
+!s100 ;V@N=b=VAPU6D7b0k]UE52
+!i10b 1
+Ereg54
+Z24 w1467766080
+R18
+R17
+R5
+R6
+R7
+Z25 8C:/Users/Thomas/Desktop/Britney/TESTBENCHES/CompareUnit/reg54.vhd
+Z26 FC:/Users/Thomas/Desktop/Britney/TESTBENCHES/CompareUnit/reg54.vhd
+l0
+L25
+VhHj]kz0S`GYLgagmCSj`12
+R10
+32
+Z27 !s108 1468885352.861000
+Z28 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|C:/Users/Thomas/Desktop/Britney/TESTBENCHES/CompareUnit/reg54.vhd|
+Z29 !s107 C:/Users/Thomas/Desktop/Britney/TESTBENCHES/CompareUnit/reg54.vhd|
+R14
+R15
+!s100 5_z9Gn51JFQ;?@>9[@8;]0
+!i10b 1
+Abehavioral
+R18
+R17
+R5
+R6
+DEx4 work 5 reg54 0 22 hHj]kz0S`GYLgagmCSj`12
+l37
+L35
+V9ji2E@G93[Y3YbO8@l3PK3
+R10
+32
+R27
+R28
+R29
+R14
+R15
+!s100 nXOVdi9J[3@O9j:[S8c=f0
+!i10b 1
+Ex16comparator
+Z30 w1468885836
+R18
+R17
+R5
+R6
+R7
+Z31 8C:/Users/Thomas/Desktop/Britney/TESTBENCHES/CompareUnit/X16Comparator.vhd
+Z32 FC:/Users/Thomas/Desktop/Britney/TESTBENCHES/CompareUnit/X16Comparator.vhd
+l0
+L6
+V_DK`aKOXaA6_ZMUMLL7l70
+R10
+32
+Z33 !s108 1468885907.938000
+Z34 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|C:/Users/Thomas/Desktop/Britney/TESTBENCHES/CompareUnit/X16Comparator.vhd|
+Z35 !s107 C:/Users/Thomas/Desktop/Britney/TESTBENCHES/CompareUnit/X16Comparator.vhd|
+R14
+R15
+!s100 ;m:NGoOOgKWd>T6Gli3:;2
+!i10b 1
+Abehavioral
+R18
+R17
+R5
+R6
+DEx4 work 13 x16comparator 0 22 _DK`aKOXaA6_ZMUMLL7l70
+l22
+L18
+V^3f^Z<59n6ZTbF9fCV_Ei3
+R10
+32
+R33
+R34
+R35
+R14
+R15
+!s100 U^[5?;HXjoRz8b2YE?1d83
+!i10b 1

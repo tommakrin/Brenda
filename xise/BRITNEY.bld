@@ -1,0 +1,44 @@
+Release 14.5 ngdbuild P.58f (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: F:\Xilinx\14.5\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe
+-intstyle ise -dd _ngo -nt timestamp -i -p xc7z020-clg484-3 BRITNEY.ngc
+BRITNEY.ngd
+
+Reading NGO file "C:/Users/Thomas/Desktop/Britney/IMPLEMENTATION/BRITNEY.ngc"
+...
+Gathering constraint information from source properties...
+Done.
+
+Resolving constraint associations...
+Checking Constraint Associations...
+Done...
+
+Checking expanded design ...
+ERROR:NgdBuild:604 - logical block 'MVMEMORY' with type 'Motion_Vector_Memory'
+   could not be resolved. A pin name misspelling can cause this, a missing edif
+   or ngc file, case mismatch between the block name and the edif or ngc file
+   name, or the misspelling of a type name. Symbol 'Motion_Vector_Memory' is not
+   supported in target 'zynq'.
+WARNING:NgdBuild:478 - clock net ctrl_reset_BUFG with clock driver
+   ctrl_reset_BUFG drives no clock pins
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     1
+  Number of warnings:   1
+
+Total memory usage is 322928 kilobytes
+
+Total REAL time to NGDBUILD completion:  17 sec
+Total CPU time to NGDBUILD completion:   17 sec
+
+One or more errors were found during NGDBUILD.  No NGD file will be written.
+
+Writing NGDBUILD log file "BRITNEY.bld"...

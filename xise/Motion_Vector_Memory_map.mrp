@@ -1,0 +1,30 @@
+Release 14.5 Map P.58f (nt64)
+Xilinx Mapping Report File for Design 'Motion_Vector_Memory'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc7z020-clg484-3 -w -logic_opt off -ol
+high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off
+-power off -o Motion_Vector_Memory_map.ncd Motion_Vector_Memory.ngd
+Motion_Vector_Memory.pcf 
+Target Device  : xc7z020
+Target Package : clg484
+Target Speed   : -3
+Mapper Version : zynq -- $Revision: 1.55 $
+Mapped Date    : Mon Feb 27 19:19:31 2017
+
+Design Summary
+--------------
+Number of errors   :   2
+Number of warnings :   0
+
+Section 1 - Errors
+------------------
+ERROR:Map:116 - The design is empty.  No processing will be done.
+ERROR:Map:52 - Problem encountered processing RPMs. 
+
+Section 2 - Warnings
+--------------------
+
+Section 3 - Informational
+-------------------------

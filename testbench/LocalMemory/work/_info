@@ -1,0 +1,363 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Thomas\Desktop\dipl_projects\Testbenches\LocalMemoryTB
+T_opt
+VnCCW2PATgL:YT8UN?c^3d0
+04 14 10 work localmemory_tb behavioral 1
+=1-bcee7b7467f0-58b4753b-368-1e0c
+Z1 o-quiet -auto_acc_if_foreign -work work
+n@_opt
+Z2 OL;O;10.1c;51
+T_opt1
+VGP6XM1JdgojJ`:DUmPg8o1
+04 9 10 work submemory behavioral 1
+=1-bcee7b7467f0-578bee79-24f-d18
+R1
+n@_opt1
+R2
+Z3 dC:\Users\Thomas\Desktop\dipl_projects\Testbenches\LocalMemoryTB
+T_opt2
+V^LLba>Gll@aVb6heKD:il0
+04 4 10 work reg8 behavioral 1
+=1-bcee7b7467f0-58b464b0-20e-3440
+R1
+n@_opt2
+R2
+R3
+Elocalmemory
+Z4 w1468787510
+Z5 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z6 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z7 dC:\Users\Thomas\Desktop\Britney\TESTBENCHES\LocalMemory
+Z8 8C:/Users/Thomas/Desktop/Britney/TESTBENCHES/LocalMemory/LocalMemory.vhd
+Z9 FC:/Users/Thomas/Desktop/Britney/TESTBENCHES/LocalMemory/LocalMemory.vhd
+l0
+L4
+VP511`1U5Z56iTS^JoSMT92
+Z10 OL;C;10.1c;51
+32
+Z11 !s108 1468789313.935000
+Z12 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|C:/Users/Thomas/Desktop/Britney/TESTBENCHES/LocalMemory/LocalMemory.vhd|
+Z13 !s107 C:/Users/Thomas/Desktop/Britney/TESTBENCHES/LocalMemory/LocalMemory.vhd|
+Z14 o-work work -2002 -explicit
+Z15 tExplicit 1
+!s100 `cSG08zVGY:VXR3j?Ql252
+!i10b 1
+Abehavioral
+R5
+R6
+DEx4 work 11 localmemory 0 22 P511`1U5Z56iTS^JoSMT92
+l76
+L17
+VgVfO4VZ0Je<Nboo5i`9061
+R10
+32
+R11
+R12
+R13
+R14
+R15
+!s100 2OdfiJh27mRezn@ZnGH`M1
+!i10b 1
+Elocalmemory_demux
+Z16 w1468774859
+R5
+R6
+R7
+Z17 8C:/Users/Thomas/Desktop/Britney/TESTBENCHES/LocalMemory/demux.vhd
+Z18 FC:/Users/Thomas/Desktop/Britney/TESTBENCHES/LocalMemory/demux.vhd
+l0
+L23
+VVIXIJhZf]Q5]<OQHnMKMT3
+R10
+32
+Z19 !s108 1468789313.851000
+Z20 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|C:/Users/Thomas/Desktop/Britney/TESTBENCHES/LocalMemory/demux.vhd|
+Z21 !s107 C:/Users/Thomas/Desktop/Britney/TESTBENCHES/LocalMemory/demux.vhd|
+R14
+R15
+!s100 94;RaD5<`Lg519MUn_Qd`0
+!i10b 1
+Abehavioral
+R5
+R6
+DEx4 work 17 localmemory_demux 0 22 VIXIJhZf]Q5]<OQHnMKMT3
+l35
+L33
+VFJ0aWGSc4Kz?0SSeSST3e3
+R10
+32
+R19
+R20
+R21
+R14
+R15
+!s100 4N;7`Vi>bz5;[jiP7SSnX1
+!i10b 1
+Elocalmemory_tb
+Z22 w1488212386
+Z23 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
+Z24 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
+R5
+R6
+R7
+Z25 8C:/Users/Thomas/Desktop/Britney/TESTBENCHES/LocalMemory/TESTBENCH.vhd
+Z26 FC:/Users/Thomas/Desktop/Britney/TESTBENCHES/LocalMemory/TESTBENCH.vhd
+l0
+L11
+VO=ommSLI[QDLFjMNOmOok3
+R10
+32
+Z27 !s108 1488221490.668000
+Z28 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|C:/Users/Thomas/Desktop/Britney/TESTBENCHES/LocalMemory/TESTBENCH.vhd|
+Z29 !s107 C:/Users/Thomas/Desktop/Britney/TESTBENCHES/LocalMemory/TESTBENCH.vhd|
+R14
+R15
+!s100 YW38T:^H]KCQ<]aN1<JgI0
+!i10b 1
+Abehavioral
+R23
+R24
+R5
+R6
+DEx4 work 14 localmemory_tb 0 22 O=ommSLI[QDLFjMNOmOok3
+l50
+L14
+VGGGXPVB`P61a`GSS3mlic2
+R10
+32
+R27
+R28
+R29
+R14
+R15
+!s100 SSco7fYTJ]j3WjEX<<<KO1
+!i10b 1
+Emux16x1
+Z30 w1468789022
+R24
+R23
+R5
+R6
+R7
+Z31 8C:/Users/Thomas/Desktop/Britney/TESTBENCHES/LocalMemory/mux16x1.vhd
+Z32 FC:/Users/Thomas/Desktop/Britney/TESTBENCHES/LocalMemory/mux16x1.vhd
+l0
+L7
+VYXAF>hk8c6S57@ne2f[T;0
+R10
+32
+Z33 !s108 1468789314.176000
+Z34 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|C:/Users/Thomas/Desktop/Britney/TESTBENCHES/LocalMemory/mux16x1.vhd|
+Z35 !s107 C:/Users/Thomas/Desktop/Britney/TESTBENCHES/LocalMemory/mux16x1.vhd|
+R14
+R15
+!s100 PhZN5MQbO16Q]>GPSImHM1
+!i10b 1
+Abehaviour
+R24
+R23
+R5
+R6
+DEx4 work 7 mux16x1 0 22 YXAF>hk8c6S57@ne2f[T;0
+l25
+L24
+VXA:jU:SLIK?0eIUV=3d=50
+R10
+32
+R33
+R34
+R35
+R14
+R15
+!s100 2`O>IeJikIRb9f@j<Z0Jd2
+!i10b 1
+Emux3x1
+Z36 w1468786617
+R24
+R23
+R5
+R6
+R7
+Z37 8C:/Users/Thomas/Desktop/Britney/TESTBENCHES/LocalMemory/mux3x1.vhd
+Z38 FC:/Users/Thomas/Desktop/Britney/TESTBENCHES/LocalMemory/mux3x1.vhd
+l0
+L7
+VNM1;I:^U1z[BGa@24jVAm3
+R10
+32
+Z39 !s108 1468789314.044000
+Z40 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|C:/Users/Thomas/Desktop/Britney/TESTBENCHES/LocalMemory/mux3x1.vhd|
+Z41 !s107 C:/Users/Thomas/Desktop/Britney/TESTBENCHES/LocalMemory/mux3x1.vhd|
+R14
+R15
+!s100 zmTBD]M5BhV@e=Jf1<W@k2
+!i10b 1
+Abehaviour
+R24
+R23
+R5
+R6
+DEx4 work 6 mux3x1 0 22 NM1;I:^U1z[BGa@24jVAm3
+l25
+L24
+V^B^85CbgBAedA`37eXi?E1
+R10
+32
+R39
+R40
+R41
+R14
+R15
+!s100 ?G>meZ]WzchCL6jjJ9kme1
+!i10b 1
+Ereg8
+Z42 w1488217238
+R24
+R23
+R5
+R6
+R7
+Z43 8C:/Users/Thomas/Desktop/Britney/TESTBENCHES/LocalMemory/foobar.vhd
+Z44 FC:/Users/Thomas/Desktop/Britney/TESTBENCHES/LocalMemory/foobar.vhd
+l0
+L6
+Vj?BlOH7TOBQCE[Ad>eg9>1
+R10
+32
+Z45 !s108 1488217242.299000
+Z46 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|C:/Users/Thomas/Desktop/Britney/TESTBENCHES/LocalMemory/foobar.vhd|
+Z47 !s107 C:/Users/Thomas/Desktop/Britney/TESTBENCHES/LocalMemory/foobar.vhd|
+R14
+R15
+!s100 FoeiZM9Oc25AWK?jk5_6_0
+!i10b 1
+Abehavioral
+R24
+R23
+R5
+R6
+DEx4 work 4 reg8 0 22 j?BlOH7TOBQCE[Ad>eg9>1
+l18
+L16
+VSlJ:U9I]YWOM8X>z=Ez4J3
+R10
+32
+R45
+R46
+R47
+R14
+R15
+!s100 <Vz@ic8O^1lTO6a@4n_4[1
+!i10b 1
+Eregcol
+Z48 w1468750575
+R5
+R6
+R7
+Z49 8C:/Users/Thomas/Desktop/Britney/TESTBENCHES/LocalMemory/RegCol.vhd
+Z50 FC:/Users/Thomas/Desktop/Britney/TESTBENCHES/LocalMemory/RegCol.vhd
+l0
+L4
+VSzC0La5gb^f9W9czR]h213
+R10
+32
+Z51 !s108 1468789314.412000
+Z52 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|C:/Users/Thomas/Desktop/Britney/TESTBENCHES/LocalMemory/RegCol.vhd|
+Z53 !s107 C:/Users/Thomas/Desktop/Britney/TESTBENCHES/LocalMemory/RegCol.vhd|
+R14
+R15
+!s100 2dFRY8@6R5m3Zbki3h;dE0
+!i10b 1
+Abehavioral
+R5
+R6
+DEx4 work 6 regcol 0 22 SzC0La5gb^f9W9czR]h213
+l31
+L15
+V7V@UKiaULme8A6FOC1Z7P0
+R10
+32
+R51
+R52
+R53
+R14
+R15
+!s100 SPjcAL07N<G5R2KXj01cc2
+!i10b 1
+Esubmemory
+Z54 w1468749909
+R5
+R6
+R7
+Z55 8C:/Users/Thomas/Desktop/Britney/TESTBENCHES/LocalMemory/SubMemory.vhd
+Z56 FC:/Users/Thomas/Desktop/Britney/TESTBENCHES/LocalMemory/SubMemory.vhd
+l0
+L4
+VTD4D=I7]k5:Y3HV4R<UXX3
+R10
+32
+Z57 !s108 1468789314.545000
+Z58 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|C:/Users/Thomas/Desktop/Britney/TESTBENCHES/LocalMemory/SubMemory.vhd|
+Z59 !s107 C:/Users/Thomas/Desktop/Britney/TESTBENCHES/LocalMemory/SubMemory.vhd|
+R14
+R15
+!s100 f78O;o<Tk3S:UA14jYjo73
+!i10b 1
+Abehavioral
+R5
+R6
+DEx4 work 9 submemory 0 22 TD4D=I7]k5:Y3HV4R<UXX3
+l40
+L16
+V2KcOeSD^Y[HbZD5<RkW>11
+R10
+32
+R57
+R58
+R59
+R14
+R15
+!s100 ]^2emcXhCnjCYM16Hk0]@0
+!i10b 1
+Ex6bit_counter
+Z60 w1468781659
+R23
+R24
+R5
+R6
+R7
+Z61 8C:/Users/Thomas/Desktop/Britney/TESTBENCHES/LocalMemory/x6bit_counter.vhd
+Z62 FC:/Users/Thomas/Desktop/Britney/TESTBENCHES/LocalMemory/x6bit_counter.vhd
+l0
+L5
+VKoFzWYMAY3B;ClCn24^=J0
+R10
+32
+Z63 !s108 1468789314.766000
+Z64 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|C:/Users/Thomas/Desktop/Britney/TESTBENCHES/LocalMemory/x6bit_counter.vhd|
+Z65 !s107 C:/Users/Thomas/Desktop/Britney/TESTBENCHES/LocalMemory/x6bit_counter.vhd|
+R14
+R15
+!s100 CCho@L[8?Z6^bcmj[deX30
+!i10b 1
+Abehavioral
+R23
+R24
+R5
+R6
+DEx4 work 13 x6bit_counter 0 22 KoFzWYMAY3B;ClCn24^=J0
+l17
+L15
+VAoeOTj8imY]ojH4<E7>Sa0
+R10
+32
+R63
+R64
+R65
+R14
+R15
+!s100 4iRjc@?[BCYjK2GzfTdVD3
+!i10b 1

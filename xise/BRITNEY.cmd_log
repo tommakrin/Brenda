@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "C:/Users/Thomas/Desktop/Britney/IMPLEMENTATION/BRITNEY.xst" -ofn "C:/Users/Thomas/Desktop/Britney/IMPLEMENTATION/BRITNEY.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc7z020-clg484-3 BRITNEY.ngc BRITNEY.ngd  

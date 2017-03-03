@@ -1,0 +1,8 @@
+vhdl work "reg8.vhd"
+vhdl work "RegCol.vhd"
+vhdl work "mux16x1.vhd"
+vhdl work "x6bit_counter.vhd"
+vhdl work "SubMemory.vhd"
+vhdl work "mux3x1.vhd"
+vhdl work "demux.vhd"
+vhdl work "LocalMemory.vhd"

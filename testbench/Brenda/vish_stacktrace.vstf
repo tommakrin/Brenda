@@ -1,0 +1,13 @@
+# Current time Wed Mar 01 04:40:09 2017
+# ModelSim Stack Trace
+# Program = vish
+# Id = "10.1c"
+# Version = "2012.07"
+# Date = "Jul 28 2012"
+# Platform = win64
+
+Exception c0000005 has occurred at address 1006ec15. Traceback:
+# 0    0x1006ec15: 'Tcl_DStringAppendElement + 0x35'
+StackWalk failed 0
+# End of Stack Trace
+

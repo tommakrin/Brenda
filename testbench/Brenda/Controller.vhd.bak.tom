@@ -1,0 +1,361 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
+
+entity Controller is
+
+port(	-- Input signals
+			count: in std_logic_vector(10 downto 0);
+			-- Output signals
+			-- Local Memory control signals
+			cs_en_wr_mem1, cs_en_wr_mem2, cs_en_wr_mem3: out std_logic; --Enable submemory write
+			cs_colcnt: out std_logic_vector(5 downto 0);			         --Set column number to read from
+			cs_datasel: out std_logic_vector(1 downto 0);					--Set path for the data in DEMUX
+			cs_en_col_load, cs_en_cnt: out std_logic;					   	--Enable load and count for internal counter
+			-- SAD Unit control signals
+			cs_en_CBData, cs_en_RBData: out std_logic;						--Choose whether the input is CB or RB
+			cs_en_DIFF: out std_logic;									  			--Enable calculation of AD
+			-- Compare Unit control signals
+			cs_en_compare: out std_logic;								   		--Enable comparison
+			-- Vector Memory control signals
+			cs_en_vecmem: out std_logic;											--Enable vector memory
+			-- Generic
+			cs_en_rst: out std_logic												--Reset subsystems
+			);
+
+end Controller;
+
+architecture Behavioral of Controller is
+
+begin
+
+	process(count)
+	
+	variable vcount: natural range 0 to 1544;
+	
+	begin
+		vcount := to_integer(unsigned(count));
+		case vcount is
+        when 1  => cs_datasel <= "00"; cs_en_CBData <= '1'; -- Read from RAM. Send CB data to PE.
+		  
+		  -- Read from RAM. First submemory fills with RB data.
+		  when 17 => cs_datasel <= "01"; cs_en_RBData <= '1'; cs_en_CBData <= '0'; cs_en_wr_mem1 <= '1';
+		  
+		  -- Read from RAM. Second submemory fills with RB data.
+		  -- PE Array reads from first submemory.
+		  when 34 => cs_en_wr_mem1 <= '0'; cs_en_wr_mem2 <= '1'; cs_datasel <= "10"; cs_en_col_load <= '1'; cs_colcnt <= "000000"; 
+		  when 35 => cs_en_col_load <= '0';
+		    
+		  -- Activate AD calculation.
+		  -- Read from RAM. Third submemory fills with data.
+		 --when 50 => cs_en_DIFF <= '1';
+		  
+		  -- Load SAD to Compare Unit. Comparation enable signal will not go to 0 until end.
+		  -- PE reads second submemory data (no need for extra signaling). Level A data reuse.
+		  when 51 => cs_en_wr_mem2 <= '0'; cs_en_wr_mem3 <= '1'; cs_datasel <= "11"; cs_en_DIFF <= '1';
+		  when 52 => cs_en_compare <= '1';
+		  		  
+		  -- Load only 16 pixels into submemory 1 on the next cycle. Starting Level B data reuse.
+		  when 67 => cs_en_wr_mem3 <= '0'; 
+		  
+		  -- Load 16 pixels into submemory 2 on the next cycle.
+		  -- Start loading submemory 3 data into PE Array
+		  when 68 => cs_en_wr_mem1 <= '1'; cs_datasel <= "01";
+		  when 69 => cs_en_wr_mem1 <= '0'; cs_en_wr_mem2 <= '1'; cs_datasel <= "10";
+		  when 70 => cs_en_wr_mem2 <= '0'; 
+
+			-- Reached 81st cycle.
+-- Start reading submemory 1. Writing only 16 pixels on submemory 3.
+when 81 => cs_en_col_load <= '1'; cs_colcnt <= "000000";
+when 82 => cs_en_DIFF <= '0'; cs_en_col_load <= '0';
+when 83 => cs_en_wr_mem3 <= '1'; cs_datasel <= "11"; 
+when 84 => cs_en_wr_mem3 <= '0';
+-- Start reading submemory 2. Writing only 16 pixels on submemory 1.
+when 98 => cs_en_DIFF <= '1';
+when 99 => cs_en_wr_mem1 <= '1'; cs_datasel <= "01";
+when 100 => cs_en_wr_mem1 <= '0';
+-- Start reading submemory 3. Writing only 16 pixels on submemory 2.
+when 115 => cs_en_wr_mem2 <= '1'; cs_datasel <= "10";
+when 116 => cs_en_wr_mem2 <= '0';
+  
+  
+-- Start reading submemory 1. Writing only 16 pixels on submemory 3.
+when 130 => cs_en_col_load <= '1'; cs_colcnt <= "000000"; cs_en_wr_mem3 <= '1'; cs_datasel <= "11";
+when 131 => cs_en_col_load <= '0'; cs_en_wr_mem3 <= '0';
+-- Start reading submemory 2. Writing only 16 pixels on submemory 1.
+when 146 => cs_en_wr_mem1 <= '1'; cs_datasel <= "01";
+when 147 => cs_en_wr_mem1 <= '0';
+-- Start reading submemory 3. Writing only 16 pixels on submemory 2.
+when 162 => cs_en_wr_mem2 <= '1'; cs_datasel <= "10";
+when 163 => cs_en_wr_mem2 <= '0';
+-- Start reading submemory 1. Writing only 16 pixels on submemory 3.
+when 177 => cs_en_col_load <= '1'; cs_colcnt <= "000000"; cs_en_wr_mem3 <= '1'; cs_datasel <= "11";
+when 178 => cs_en_col_load <= '0'; cs_en_wr_mem3 <= '0';
+-- Start reading submemory 2. Writing only 16 pixels on submemory 1.
+when 193 => cs_en_wr_mem1 <= '1'; cs_datasel <= "01";
+when 194 => cs_en_wr_mem1 <= '0';
+-- Start reading submemory 3. Writing only 16 pixels on submemory 2.
+when 209 => cs_en_wr_mem2 <= '1'; cs_datasel <= "10";
+when 210 => cs_en_wr_mem2 <= '0';
+-- Start reading submemory 1. Writing only 16 pixels on submemory 3.
+when 224 => cs_en_col_load <= '1'; cs_colcnt <= "000000"; cs_en_wr_mem3 <= '1'; cs_datasel <= "11";
+when 225 => cs_en_col_load <= '0'; cs_en_wr_mem3 <= '0';
+-- Start reading submemory 2. Writing only 16 pixels on submemory 1.
+when 240 => cs_en_wr_mem1 <= '1'; cs_datasel <= "01";
+when 241 => cs_en_wr_mem1 <= '0';
+-- Start reading submemory 3. Writing only 16 pixels on submemory 2.
+when 256 => cs_en_wr_mem2 <= '1'; cs_datasel <= "10";
+when 257 => cs_en_wr_mem2 <= '0';
+-- Start reading submemory 1. Writing only 16 pixels on submemory 3.
+when 271 => cs_en_col_load <= '1'; cs_colcnt <= "000000"; cs_en_wr_mem3 <= '1'; cs_datasel <= "11";
+when 272 => cs_en_col_load <= '0'; cs_en_wr_mem3 <= '0';
+-- Start reading submemory 2. Writing only 16 pixels on submemory 1.
+when 287 => cs_en_wr_mem1 <= '1'; cs_datasel <= "01";
+when 288 => cs_en_wr_mem1 <= '0';
+-- Start reading submemory 3. Writing only 16 pixels on submemory 2.
+when 303 => cs_en_wr_mem2 <= '1'; cs_datasel <= "10";
+when 304 => cs_en_wr_mem2 <= '0';
+-- Start reading submemory 1. Writing only 16 pixels on submemory 3.
+when 318 => cs_en_col_load <= '1'; cs_colcnt <= "000000"; cs_en_wr_mem3 <= '1'; cs_datasel <= "11";
+when 319 => cs_en_col_load <= '0'; cs_en_wr_mem3 <= '0';
+-- Start reading submemory 2. Writing only 16 pixels on submemory 1.
+when 334 => cs_en_wr_mem1 <= '1'; cs_datasel <= "01";
+when 335 => cs_en_wr_mem1 <= '0';
+-- Start reading submemory 3. Writing only 16 pixels on submemory 2.
+when 350 => cs_en_wr_mem2 <= '1'; cs_datasel <= "10";
+when 351 => cs_en_wr_mem2 <= '0';
+-- Start reading submemory 1. Writing only 16 pixels on submemory 3.
+when 365 => cs_en_col_load <= '1'; cs_colcnt <= "000000"; cs_en_wr_mem3 <= '1'; cs_datasel <= "11";
+when 366 => cs_en_col_load <= '0'; cs_en_wr_mem3 <= '0';
+-- Start reading submemory 2. Writing only 16 pixels on submemory 1.
+when 381 => cs_en_wr_mem1 <= '1'; cs_datasel <= "01";
+when 382 => cs_en_wr_mem1 <= '0';
+-- Start reading submemory 3. Writing only 16 pixels on submemory 2.
+when 397 => cs_en_wr_mem2 <= '1'; cs_datasel <= "10";
+when 398 => cs_en_wr_mem2 <= '0';
+-- Start reading submemory 1. Writing only 16 pixels on submemory 3.
+when 412 => cs_en_col_load <= '1'; cs_colcnt <= "000000"; cs_en_wr_mem3 <= '1'; cs_datasel <= "11";
+when 413 => cs_en_col_load <= '0'; cs_en_wr_mem3 <= '0';
+-- Start reading submemory 2. Writing only 16 pixels on submemory 1.
+when 428 => cs_en_wr_mem1 <= '1'; cs_datasel <= "01";
+when 429 => cs_en_wr_mem1 <= '0';
+-- Start reading submemory 3. Writing only 16 pixels on submemory 2.
+when 444 => cs_en_wr_mem2 <= '1'; cs_datasel <= "10";
+when 445 => cs_en_wr_mem2 <= '0';
+-- Start reading submemory 1. Writing only 16 pixels on submemory 3.
+when 459 => cs_en_col_load <= '1'; cs_colcnt <= "000000"; cs_en_wr_mem3 <= '1'; cs_datasel <= "11";
+when 460 => cs_en_col_load <= '0'; cs_en_wr_mem3 <= '0';
+-- Start reading submemory 2. Writing only 16 pixels on submemory 1.
+when 475 => cs_en_wr_mem1 <= '1'; cs_datasel <= "01";
+when 476 => cs_en_wr_mem1 <= '0';
+-- Start reading submemory 3. Writing only 16 pixels on submemory 2.
+when 491 => cs_en_wr_mem2 <= '1'; cs_datasel <= "10";
+when 492 => cs_en_wr_mem2 <= '0';
+-- Start reading submemory 1. Writing only 16 pixels on submemory 3.
+when 506 => cs_en_col_load <= '1'; cs_colcnt <= "000000"; cs_en_wr_mem3 <= '1'; cs_datasel <= "11";
+when 507 => cs_en_col_load <= '0'; cs_en_wr_mem3 <= '0';
+-- Start reading submemory 2. Writing only 16 pixels on submemory 1.
+when 522 => cs_en_wr_mem1 <= '1'; cs_datasel <= "01";
+when 523 => cs_en_wr_mem1 <= '0';
+-- Start reading submemory 3. Writing only 16 pixels on submemory 2.
+when 538 => cs_en_wr_mem2 <= '1'; cs_datasel <= "10";
+when 539 => cs_en_wr_mem2 <= '0';
+-- Start reading submemory 1. Writing only 16 pixels on submemory 3.
+when 553 => cs_en_col_load <= '1'; cs_colcnt <= "000000"; cs_en_wr_mem3 <= '1'; cs_datasel <= "11";
+when 554 => cs_en_col_load <= '0'; cs_en_wr_mem3 <= '0';
+-- Start reading submemory 2. Writing only 16 pixels on submemory 1.
+when 569 => cs_en_wr_mem1 <= '1'; cs_datasel <= "01";
+when 570 => cs_en_wr_mem1 <= '0';
+-- Start reading submemory 3. Writing only 16 pixels on submemory 2.
+when 585 => cs_en_wr_mem2 <= '1'; cs_datasel <= "10";
+when 586 => cs_en_wr_mem2 <= '0';
+-- Start reading submemory 1. Writing only 16 pixels on submemory 3.
+when 600 => cs_en_col_load <= '1'; cs_colcnt <= "000000"; cs_en_wr_mem3 <= '1'; cs_datasel <= "11";
+when 601 => cs_en_col_load <= '0'; cs_en_wr_mem3 <= '0';
+-- Start reading submemory 2. Writing only 16 pixels on submemory 1.
+when 616 => cs_en_wr_mem1 <= '1'; cs_datasel <= "01";
+when 617 => cs_en_wr_mem1 <= '0';
+-- Start reading submemory 3. Writing only 16 pixels on submemory 2.
+when 632 => cs_en_wr_mem2 <= '1'; cs_datasel <= "10";
+when 633 => cs_en_wr_mem2 <= '0';
+-- Start reading submemory 1. Writing only 16 pixels on submemory 3.
+when 647 => cs_en_col_load <= '1'; cs_colcnt <= "000000"; cs_en_wr_mem3 <= '1'; cs_datasel <= "11";
+when 648 => cs_en_col_load <= '0'; cs_en_wr_mem3 <= '0';
+-- Start reading submemory 2. Writing only 16 pixels on submemory 1.
+when 663 => cs_en_wr_mem1 <= '1'; cs_datasel <= "01";
+when 664 => cs_en_wr_mem1 <= '0';
+-- Start reading submemory 3. Writing only 16 pixels on submemory 2.
+when 679 => cs_en_wr_mem2 <= '1'; cs_datasel <= "10";
+when 680 => cs_en_wr_mem2 <= '0';
+-- Start reading submemory 1. Writing only 16 pixels on submemory 3.
+when 694 => cs_en_col_load <= '1'; cs_colcnt <= "000000"; cs_en_wr_mem3 <= '1'; cs_datasel <= "11";
+when 695 => cs_en_col_load <= '0'; cs_en_wr_mem3 <= '0';
+-- Start reading submemory 2. Writing only 16 pixels on submemory 1.
+when 710 => cs_en_wr_mem1 <= '1'; cs_datasel <= "01";
+when 711 => cs_en_wr_mem1 <= '0';
+-- Start reading submemory 3. Writing only 16 pixels on submemory 2.
+when 726 => cs_en_wr_mem2 <= '1'; cs_datasel <= "10";
+when 727 => cs_en_wr_mem2 <= '0';
+-- Start reading submemory 1. Writing only 16 pixels on submemory 3.
+when 741 => cs_en_col_load <= '1'; cs_colcnt <= "000000"; cs_en_wr_mem3 <= '1'; cs_datasel <= "11";
+when 742 => cs_en_col_load <= '0'; cs_en_wr_mem3 <= '0';
+-- Start reading submemory 2. Writing only 16 pixels on submemory 1.
+when 757 => cs_en_wr_mem1 <= '1'; cs_datasel <= "01";
+when 758 => cs_en_wr_mem1 <= '0';
+-- Start reading submemory 3. Writing only 16 pixels on submemory 2.
+when 773 => cs_en_wr_mem2 <= '1'; cs_datasel <= "10";
+when 774 => cs_en_wr_mem2 <= '0';
+-- Start reading submemory 1. Writing only 16 pixels on submemory 3.
+when 788 => cs_en_col_load <= '1'; cs_colcnt <= "000000"; cs_en_wr_mem3 <= '1'; cs_datasel <= "11";
+when 789 => cs_en_col_load <= '0'; cs_en_wr_mem3 <= '0';
+-- Start reading submemory 2. Writing only 16 pixels on submemory 1.
+when 804 => cs_en_wr_mem1 <= '1'; cs_datasel <= "01";
+when 805 => cs_en_wr_mem1 <= '0';
+-- Start reading submemory 3. Writing only 16 pixels on submemory 2.
+when 820 => cs_en_wr_mem2 <= '1'; cs_datasel <= "10";
+when 821 => cs_en_wr_mem2 <= '0';
+-- Start reading submemory 1. Writing only 16 pixels on submemory 3.
+when 835 => cs_en_col_load <= '1'; cs_colcnt <= "000000"; cs_en_wr_mem3 <= '1'; cs_datasel <= "11";
+when 836 => cs_en_col_load <= '0'; cs_en_wr_mem3 <= '0';
+-- Start reading submemory 2. Writing only 16 pixels on submemory 1.
+when 851 => cs_en_wr_mem1 <= '1'; cs_datasel <= "01";
+when 852 => cs_en_wr_mem1 <= '0';
+-- Start reading submemory 3. Writing only 16 pixels on submemory 2.
+when 867 => cs_en_wr_mem2 <= '1'; cs_datasel <= "10";
+when 868 => cs_en_wr_mem2 <= '0';
+-- Start reading submemory 1. Writing only 16 pixels on submemory 3.
+when 882 => cs_en_col_load <= '1'; cs_colcnt <= "000000"; cs_en_wr_mem3 <= '1'; cs_datasel <= "11";
+when 883 => cs_en_col_load <= '0'; cs_en_wr_mem3 <= '0';
+-- Start reading submemory 2. Writing only 16 pixels on submemory 1.
+when 898 => cs_en_wr_mem1 <= '1'; cs_datasel <= "01";
+when 899 => cs_en_wr_mem1 <= '0';
+-- Start reading submemory 3. Writing only 16 pixels on submemory 2.
+when 914 => cs_en_wr_mem2 <= '1'; cs_datasel <= "10";
+when 915 => cs_en_wr_mem2 <= '0';
+-- Start reading submemory 1. Writing only 16 pixels on submemory 3.
+when 929 => cs_en_col_load <= '1'; cs_colcnt <= "000000"; cs_en_wr_mem3 <= '1'; cs_datasel <= "11";
+when 930 => cs_en_col_load <= '0'; cs_en_wr_mem3 <= '0';
+-- Start reading submemory 2. Writing only 16 pixels on submemory 1.
+when 945 => cs_en_wr_mem1 <= '1'; cs_datasel <= "01";
+when 946 => cs_en_wr_mem1 <= '0';
+-- Start reading submemory 3. Writing only 16 pixels on submemory 2.
+when 961 => cs_en_wr_mem2 <= '1'; cs_datasel <= "10";
+when 962 => cs_en_wr_mem2 <= '0';
+-- Start reading submemory 1. Writing only 16 pixels on submemory 3.
+when 976 => cs_en_col_load <= '1'; cs_colcnt <= "000000"; cs_en_wr_mem3 <= '1'; cs_datasel <= "11";
+when 977 => cs_en_col_load <= '0'; cs_en_wr_mem3 <= '0';
+-- Start reading submemory 2. Writing only 16 pixels on submemory 1.
+when 992 => cs_en_wr_mem1 <= '1'; cs_datasel <= "01";
+when 993 => cs_en_wr_mem1 <= '0';
+-- Start reading submemory 3. Writing only 16 pixels on submemory 2.
+when 1008 => cs_en_wr_mem2 <= '1'; cs_datasel <= "10";
+when 1009 => cs_en_wr_mem2 <= '0';
+-- Start reading submemory 1. Writing only 16 pixels on submemory 3.
+when 1023 => cs_en_col_load <= '1'; cs_colcnt <= "000000"; cs_en_wr_mem3 <= '1'; cs_datasel <= "11";
+when 1024 => cs_en_col_load <= '0'; cs_en_wr_mem3 <= '0';
+-- Start reading submemory 2. Writing only 16 pixels on submemory 1.
+when 1039 => cs_en_wr_mem1 <= '1'; cs_datasel <= "01";
+when 1040 => cs_en_wr_mem1 <= '0';
+-- Start reading submemory 3. Writing only 16 pixels on submemory 2.
+when 1055 => cs_en_wr_mem2 <= '1'; cs_datasel <= "10";
+when 1056 => cs_en_wr_mem2 <= '0';
+-- Start reading submemory 1. Writing only 16 pixels on submemory 3.
+when 1070 => cs_en_col_load <= '1'; cs_colcnt <= "000000"; cs_en_wr_mem3 <= '1'; cs_datasel <= "11";
+when 1071 => cs_en_col_load <= '0'; cs_en_wr_mem3 <= '0';
+-- Start reading submemory 2. Writing only 16 pixels on submemory 1.
+when 1086 => cs_en_wr_mem1 <= '1'; cs_datasel <= "01";
+when 1087 => cs_en_wr_mem1 <= '0';
+-- Start reading submemory 3. Writing only 16 pixels on submemory 2.
+when 1102 => cs_en_wr_mem2 <= '1'; cs_datasel <= "10";
+when 1103 => cs_en_wr_mem2 <= '0';
+-- Start reading submemory 1. Writing only 16 pixels on submemory 3.
+when 1117 => cs_en_col_load <= '1'; cs_colcnt <= "000000"; cs_en_wr_mem3 <= '1'; cs_datasel <= "11";
+when 1118 => cs_en_col_load <= '0'; cs_en_wr_mem3 <= '0';
+-- Start reading submemory 2. Writing only 16 pixels on submemory 1.
+when 1133 => cs_en_wr_mem1 <= '1'; cs_datasel <= "01";
+when 1134 => cs_en_wr_mem1 <= '0';
+-- Start reading submemory 3. Writing only 16 pixels on submemory 2.
+when 1149 => cs_en_wr_mem2 <= '1'; cs_datasel <= "10";
+when 1150 => cs_en_wr_mem2 <= '0';
+-- Start reading submemory 1. Writing only 16 pixels on submemory 3.
+when 1164 => cs_en_col_load <= '1'; cs_colcnt <= "000000"; cs_en_wr_mem3 <= '1'; cs_datasel <= "11";
+when 1165 => cs_en_col_load <= '0'; cs_en_wr_mem3 <= '0';
+-- Start reading submemory 2. Writing only 16 pixels on submemory 1.
+when 1180 => cs_en_wr_mem1 <= '1'; cs_datasel <= "01";
+when 1181 => cs_en_wr_mem1 <= '0';
+-- Start reading submemory 3. Writing only 16 pixels on submemory 2.
+when 1196 => cs_en_wr_mem2 <= '1'; cs_datasel <= "10";
+when 1197 => cs_en_wr_mem2 <= '0';
+-- Start reading submemory 1. Writing only 16 pixels on submemory 3.
+when 1211 => cs_en_col_load <= '1'; cs_colcnt <= "000000"; cs_en_wr_mem3 <= '1'; cs_datasel <= "11";
+when 1212 => cs_en_col_load <= '0'; cs_en_wr_mem3 <= '0';
+-- Start reading submemory 2. Writing only 16 pixels on submemory 1.
+when 1227 => cs_en_wr_mem1 <= '1'; cs_datasel <= "01";
+when 1228 => cs_en_wr_mem1 <= '0';
+-- Start reading submemory 3. Writing only 16 pixels on submemory 2.
+when 1243 => cs_en_wr_mem2 <= '1'; cs_datasel <= "10";
+when 1244 => cs_en_wr_mem2 <= '0';
+-- Start reading submemory 1. Writing only 16 pixels on submemory 3.
+when 1258 => cs_en_col_load <= '1'; cs_colcnt <= "000000"; cs_en_wr_mem3 <= '1'; cs_datasel <= "11";
+when 1259 => cs_en_col_load <= '0'; cs_en_wr_mem3 <= '0';
+-- Start reading submemory 2. Writing only 16 pixels on submemory 1.
+when 1274 => cs_en_wr_mem1 <= '1'; cs_datasel <= "01";
+when 1275 => cs_en_wr_mem1 <= '0';
+-- Start reading submemory 3. Writing only 16 pixels on submemory 2.
+when 1290 => cs_en_wr_mem2 <= '1'; cs_datasel <= "10";
+when 1291 => cs_en_wr_mem2 <= '0';
+-- Start reading submemory 1. Writing only 16 pixels on submemory 3.
+when 1305 => cs_en_col_load <= '1'; cs_colcnt <= "000000"; cs_en_wr_mem3 <= '1'; cs_datasel <= "11";
+when 1306 => cs_en_col_load <= '0'; cs_en_wr_mem3 <= '0';
+-- Start reading submemory 2. Writing only 16 pixels on submemory 1.
+when 1321 => cs_en_wr_mem1 <= '1'; cs_datasel <= "01";
+when 1322 => cs_en_wr_mem1 <= '0';
+-- Start reading submemory 3. Writing only 16 pixels on submemory 2.
+when 1337 => cs_en_wr_mem2 <= '1'; cs_datasel <= "10";
+when 1338 => cs_en_wr_mem2 <= '0';
+-- Start reading submemory 1. Writing only 16 pixels on submemory 3.
+when 1352 => cs_en_col_load <= '1'; cs_colcnt <= "000000"; cs_en_wr_mem3 <= '1'; cs_datasel <= "11";
+when 1353 => cs_en_col_load <= '0'; cs_en_wr_mem3 <= '0';
+-- Start reading submemory 2. Writing only 16 pixels on submemory 1.
+when 1368 => cs_en_wr_mem1 <= '1'; cs_datasel <= "01";
+when 1369 => cs_en_wr_mem1 <= '0';
+-- Start reading submemory 3. Writing only 16 pixels on submemory 2.
+when 1384 => cs_en_wr_mem2 <= '1'; cs_datasel <= "10";
+when 1385 => cs_en_wr_mem2 <= '0';
+-- Start reading submemory 1. Writing only 16 pixels on submemory 3.
+when 1399 => cs_en_col_load <= '1'; cs_colcnt <= "000000"; cs_en_wr_mem3 <= '1'; cs_datasel <= "11";
+when 1400 => cs_en_col_load <= '0'; cs_en_wr_mem3 <= '0';
+-- Start reading submemory 2. Writing only 16 pixels on submemory 1.
+when 1415 => cs_en_wr_mem1 <= '1'; cs_datasel <= "01";
+when 1416 => cs_en_wr_mem1 <= '0';
+-- Start reading submemory 3. Writing only 16 pixels on submemory 2.
+when 1431 => cs_en_wr_mem2 <= '1'; cs_datasel <= "10";
+when 1432 => cs_en_wr_mem2 <= '0';
+-- Start reading submemory 1. Writing only 16 pixels on submemory 3.
+when 1446 => cs_en_col_load <= '1'; cs_colcnt <= "000000"; cs_en_wr_mem3 <= '1'; cs_datasel <= "11";
+when 1447 => cs_en_col_load <= '0'; cs_en_wr_mem3 <= '0';
+-- Start reading submemory 2. Writing only 16 pixels on submemory 1.
+when 1462 => cs_en_wr_mem1 <= '1'; cs_datasel <= "01";
+when 1463 => cs_en_wr_mem1 <= '0';
+-- Start reading submemory 3. Writing only 16 pixels on submemory 2.
+when 1478 => cs_en_wr_mem2 <= '1'; cs_datasel <= "10";
+when 1479 => cs_en_wr_mem2 <= '0';
+-- Start reading submemory 1. Writing only 16 pixels on submemory 3.
+when 1493 => cs_en_col_load <= '1'; cs_colcnt <= "000000"; cs_en_wr_mem3 <= '1'; cs_datasel <= "11";
+when 1494 => cs_en_col_load <= '0'; cs_en_wr_mem3 <= '0';
+-- Start reading submemory 2. Writing only 16 pixels on submemory 1.
+when 1509 => cs_en_wr_mem1 <= '1'; cs_datasel <= "01";
+when 1510 => cs_en_wr_mem1 <= '0';
+-- Start reading submemory 3. Writing only 16 pixels on submemory 2.
+when 1525 => cs_en_wr_mem2 <= '1'; cs_datasel <= "10";
+when 1526 => cs_en_wr_mem2 <= '0';
+			
+			--Storing Actual Motion Vector (AMV)
+			when 1541 => cs_en_vecmem <= '1'; cs_en_compare <= '0';
+			when 1543 => cs_en_rst <= '1';
+			
+      when others => cs_en_rst <= '0'; null;
+		end case;
+	end process;
+
+end Behavioral;

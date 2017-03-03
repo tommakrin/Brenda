@@ -1,0 +1,127 @@
+m255
+K3
+13
+cModel Technology
+dC:\Users\Thomas\Desktop\Britney\TESTBENCHES\SadUnit
+T_opt
+VPMB[KHZRg3UKBULaaeZ8X2
+04 12 10 work control_unit behavioral 1
+=1-bcee7b7467f0-58b4688a-27b-346c
+o-quiet -auto_acc_if_foreign -work work
+n@_opt
+OL;O;10.1c;51
+Econtrol_unit
+Z0 w1468870083
+Z1 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
+Z2 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
+Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z5 dC:\Users\Thomas\Desktop\Britney\TESTBENCHES\ControlUnit
+Z6 8C:/Users/Thomas/Desktop/Britney/TESTBENCHES/ControlUnit/Control_Unit.vhd
+Z7 FC:/Users/Thomas/Desktop/Britney/TESTBENCHES/ControlUnit/Control_Unit.vhd
+l0
+L5
+VSOORM9e0AFiLm<8T1m[fa2
+Z8 OL;C;10.1c;51
+32
+Z9 !s108 1468870110.345000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|C:/Users/Thomas/Desktop/Britney/TESTBENCHES/ControlUnit/Control_Unit.vhd|
+Z11 !s107 C:/Users/Thomas/Desktop/Britney/TESTBENCHES/ControlUnit/Control_Unit.vhd|
+Z12 o-work work -2002 -explicit
+Z13 tExplicit 1
+!s100 Z_d<zRl7GZW2dn2nDjUMP1
+!i10b 1
+Abehavioral
+R1
+R2
+R3
+R4
+DEx4 work 12 control_unit 0 22 SOORM9e0AFiLm<8T1m[fa2
+l78
+L36
+VS>f2bHoSg>>8;]BHRdTKK0
+R8
+32
+R9
+R10
+R11
+R12
+R13
+!s100 ;B<oS3e9gJoRIWS4lTC<[3
+!i10b 1
+Econtroller
+Z14 w1468884894
+Z15 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+R3
+R4
+R5
+Z16 8C:/Users/Thomas/Desktop/Britney/TESTBENCHES/ControlUnit/Controller.vhd
+Z17 FC:/Users/Thomas/Desktop/Britney/TESTBENCHES/ControlUnit/Controller.vhd
+l0
+L5
+V:K;O`^kk<M4Ma6nmZ?_WQ2
+R8
+32
+Z18 !s108 1468884954.554000
+Z19 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|C:/Users/Thomas/Desktop/Britney/TESTBENCHES/ControlUnit/Controller.vhd|
+Z20 !s107 C:/Users/Thomas/Desktop/Britney/TESTBENCHES/ControlUnit/Controller.vhd|
+R12
+R13
+!s100 i[Ykj2JU64ML1zmE?]J?93
+!i10b 1
+Abehavioral
+R15
+R3
+R4
+DEx4 work 10 controller 0 22 :K;O`^kk<M4Ma6nmZ?_WQ2
+l30
+L28
+VLOViP6J9Hl8In::mN@>hD2
+R8
+32
+R18
+R19
+R20
+R12
+R13
+!s100 F@]GkOX_J2EDd2hW0K4S92
+!i10b 1
+Ex11bit_counter
+Z21 w1468172406
+R1
+R2
+R3
+R4
+R5
+Z22 8C:/Users/Thomas/Desktop/Britney/TESTBENCHES/ControlUnit/x15bit_counter.vhd
+Z23 FC:/Users/Thomas/Desktop/Britney/TESTBENCHES/ControlUnit/x15bit_counter.vhd
+l0
+L5
+VO_KIo6GiSjHA3NSYCE[m73
+R8
+32
+Z24 !s108 1468870110.502000
+Z25 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|C:/Users/Thomas/Desktop/Britney/TESTBENCHES/ControlUnit/x15bit_counter.vhd|
+Z26 !s107 C:/Users/Thomas/Desktop/Britney/TESTBENCHES/ControlUnit/x15bit_counter.vhd|
+R12
+R13
+!s100 :Z7C]9InioX9=;@Nj3<bH0
+!i10b 1
+Abehavioral
+R1
+R2
+R3
+R4
+DEx4 work 14 x11bit_counter 0 22 O_KIo6GiSjHA3NSYCE[m73
+l15
+L13
+V_e@hZQ=gkO_mf1XXa0>2_0
+R8
+32
+R24
+R25
+R26
+R12
+R13
+!s100 k_c71LcBI5W^f[1=2X[gz1
+!i10b 1

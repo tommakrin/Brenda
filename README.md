@@ -3,12 +3,12 @@
 ## A few words for this project
 
 This repo holds all (almost) the job I've done for my diploma thesis, during my studies at University of Western Macedonia - Department of Informatics
-and Telecommunications Engineering. The projects describes the architectural design of an Accelerator IP for the Full search Motion Estimation Algorithm
+and Telecommunications Engineering. The project describes the architectural design of an Accelerator IP for the Full search Motion Estimation Algorithm
 (FSME). The VHDL code, among with the necessary testbenches, scripts and docs are included.
 
 The first idea behind this project came up on September 2015, and initially it was designed to target H.265 - HEVC codecs. However, due to lack of:
 time, experience with VHDL, experience with theory of video compression, necessary equipment (large FPGAs, logic analyzers, etc) it was decided to stick
-with something a lot simpler than that, which could provide valuable knowledge, and of course a good starting point for any future project. So, a month
+with something a lot simpler than that, which could still provide valuable knowledge, and of course a good starting point for any future project. So, a month
 later, I started looking for an appropriate architecture in order to begin with. 
 
 At first I tried translating a simple C program into hardware via HLS, but I was quickly disappointed. So after a couple of months researching I found

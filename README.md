@@ -30,6 +30,8 @@ MatLAB - I used whatever was more convenient for me.
 * vivado : The necessary files to compile a fully functional project in Vivado
 * xise : A Xilinx ISE project for the project :P
 
-Even though everything uploaded here is freely available for use and redistribution, if you decide to use part or whole of my work please consider bying
+Even though everything uploaded here is freely available for use and redistribution, if you decide to use part or whole of my work please consider buying
 me a beer. I spent hundreds of hours, liters of coffee (and alcohol) and tons of broken nerves and morale, in order to make this thing work
 (at least minimally).
+
+## For now this project is constantly changing, new things added, files corrected, scrap removed etc. Stay tuned for updated versions!

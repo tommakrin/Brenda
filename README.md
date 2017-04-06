@@ -16,8 +16,8 @@ this paper: "Yasser Ismail, ”A Complete Verification of a Full Search Motion E
 University of Bahrain, 1 October 2015" which provided me with an excellent starting point.
 
 The project doesn't end here. Since the initial idea was about a FSME Accelerator IP integrated into an embedded system (e.g. with an ARM processor), 
-there is a whole new level of VHDL, testbenches and software implementing the interconnection of this IP with the rest of a ZYNQ 7000 platform (ARM CPU,
-external RAM, etc). These parts are going to be added soon to the repo, as soon as I'm done with the testing.
+there is a whole new level of VHDL, testbenches and software implementing the (notorious :P) interconnection of this IP with the rest of a ZYNQ 7000 platform (ARM CPU,
+external RAM, etc) over the AXI protocol. These parts are going to be added soon to the repo, as soon as I'm done with the testing.
 
 The file tree includes the following:
 

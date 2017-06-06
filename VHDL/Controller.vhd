@@ -9,16 +9,16 @@ port(	-- Input signals
 			-- Output signals
 			-- Local Memory control signals
 			cs_en_wr_mem1, cs_en_wr_mem2, cs_en_wr_mem3: out std_logic; --Enable submemory write
-			cs_colcnt: out std_logic_vector(5 downto 0);			         --Set column number to read from
-			cs_datasel: out std_logic_vector(1 downto 0);					--Set path for the data in DEMUX
-			cs_en_col_load, cs_en_cnt: out std_logic;					   	--Enable load and count for internal counter
+			cs_colcnt: out std_logic_vector(5 downto 0);			--Set column number to read from
+			cs_datasel: out std_logic_vector(1 downto 0);			--Set path for the data in DEMUX
+			cs_en_col_load, cs_en_cnt: out std_logic;			--Enable load and count for internal counter
 			-- SAD Unit control signals
-			cs_en_CBData, cs_en_RBData: out std_logic;						--Choose whether the input is CB or RB
+			cs_en_CBData, cs_en_RBData: out std_logic;			--Choose whether the input is CB or RB
 			cs_en_DIFF: out std_logic;									  			--Enable calculation of AD
 			-- Compare Unit control signals
-			cs_en_compare: out std_logic;								   		--Enable comparison
+			cs_en_compare: out std_logic;					--Enable comparison
 			-- Vector Memory control signals
-			cs_en_vecmem: out std_logic;											--Enable vector memory
+			cs_en_vecmem: out std_logic;					--Enable vector memory
 			-- Generic
 			cs_en_rst: out std_logic												--Reset subsystems
 			);
